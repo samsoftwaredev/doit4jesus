@@ -11,15 +11,6 @@
   --blush: #b39b95;
 }
 
-:root[data-theme='dark'] {
-  color-scheme: dark;
-  --surface: #101d2a;
-  --paper: #172a3b;
-  --ink: #f5f5f2;
-  --muted: #c4d0d9;
-  --line: #3b5162;
-}
-
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--font-geist-sans), Arial, sans-serif; }
 a { color: inherit; }
@@ -49,8 +40,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .main-nav a:hover::after, .main-nav a:focus-visible::after { transform: scaleX(1); }
 .header-actions { display: flex; align-items: center; gap: 5px; }
-.theme-toggle { width: 44px; height: 44px; color: #fff !important; }
-.theme-toggle svg { width: 22px; height: 22px; }
 .language-selector { position: relative; }
 .language-selector summary {
   display: flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 4px 0 6px;
@@ -193,13 +182,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .translation-notice p { font-size: 14px; line-height: 1.65; }
 .translation-notice a { font-weight: 700; }
 
-:root[data-theme='dark'] .site-footer { background: #142536; color: #f5f5f2; }
-:root[data-theme='dark'] .site-footer .brand-logo { filter: invert(1); }
-:root[data-theme='dark'] .footer-copyright, :root[data-theme='dark'] .footer-links a { color: #c4d0d9; }
-:root[data-theme='dark'] .social-links a { color: #d7e4e9; }
-:root[data-theme='dark'] .rosary-gradient { background: linear-gradient(180deg, #153e5f 0%, #2f5870 48%, #6e7884 78%, var(--paper) 100%); }
-:root[data-theme='dark'] .benefit-card { background: #f6f7f7; }
-:root[data-theme='dark'] .hero-section { background: linear-gradient(180deg, #0b2943 0%, #153e5f 25%, #52738a 53%, #8b7d82 77%, var(--paper) 100%); }
 
 /* Features page */
 .features-hero { position: relative; overflow: hidden; background: radial-gradient(circle at 82% 37%, #56758a 0, transparent 37%), linear-gradient(135deg, #0c2b44 0%, #153e5f 58%, #8b9298 100%); color: #fff; }
@@ -296,10 +278,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .features-cta-final h2 { max-width: 840px; margin: 0 auto; }
 .features-cta-final p { color: var(--muted); }
 .features-cta-final .MuiButton-outlined { border-color: var(--line); color: var(--ink); }
-:root[data-theme='dark'] .features-difference-card-highlight { border-color: #4e7186; background: #1b3a4e; }
-:root[data-theme='dark'] .features-difference-card-highlight h3, :root[data-theme='dark'] .features-difference-card-highlight li { color: #f1f6f8; }
-:root[data-theme='dark'] .detail-feature-icon { border-color: #456679; background: #21455c; color: #d8e7ee; }
-:root[data-theme='dark'] .feature-navigation a:hover, :root[data-theme='dark'] .feature-navigation a:focus-visible { background: #31546b; color: #fff; }
 
 @media (max-width: 1100px) {
   .header-inner { gap: 15px; }
@@ -404,7 +382,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .header-actions { gap: 0; }
   .language-selector summary { padding-inline: 0; gap: 4px; font-size: 12px; }
   .language-name { max-width: 46px; overflow: hidden; text-overflow: ellipsis; }
-  .theme-toggle, .mobile-menu summary { width: 40px; height: 44px; }
+  .mobile-menu summary { width: 40px; height: 44px; }
   .hero-section { min-height: 735px; }
   .hero-inner { padding-top: 127px; }
   .hero-inner h1 { font-size: clamp(2.9rem, 11vw, 3.5rem); }

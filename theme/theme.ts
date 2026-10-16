@@ -1,15 +1,13 @@
-import { createTheme, type PaletteMode } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
-export const getTheme = (mode: PaletteMode) => createTheme({
+export const theme = createTheme({
   palette: {
-    mode,
-    primary: mode === 'light'
-      ? { main: '#173c58', dark: '#0d293f', light: '#527993', contrastText: '#fff' }
-      : { main: '#8db3cb', dark: '#5f8fac', light: '#bad2e1', contrastText: '#0d2539' },
+    mode: 'light',
+    primary: { main: '#173c58', dark: '#0d293f', light: '#527993', contrastText: '#fff' },
     secondary: { main: '#a77c77', light: '#ead9d2', dark: '#805a58' },
-    background: mode === 'light' ? { default: '#fafaf8', paper: '#fff' } : { default: '#101d2a', paper: '#172a3b' },
-    text: mode === 'light' ? { primary: '#252525', secondary: '#4d5d69' } : { primary: '#f5f5f2', secondary: '#c4d0d9' },
-    divider: mode === 'light' ? '#e4e7e6' : '#3b5162',
+    background: { default: '#fafaf8', paper: '#fff' },
+    text: { primary: '#252525', secondary: '#4d5d69' },
+    divider: '#e4e7e6',
   },
   typography: {
     fontFamily: 'var(--font-geist-sans), Arial, Helvetica, sans-serif',
@@ -27,7 +25,7 @@ export const getTheme = (mode: PaletteMode) => createTheme({
       defaultProps: { disableElevation: true },
       styleOverrides: {
         root: { borderRadius: 999, minHeight: 44, paddingInline: 25, transition: 'transform 200ms ease, filter 200ms ease, background-color 200ms ease', '&:hover': { transform: 'scale(1.035)' } },
-        containedPrimary: { '&:hover': { backgroundColor: mode === 'light' ? '#0d293f' : '#b0cee0' } },
+        containedPrimary: { '&:hover': { backgroundColor: '#0d293f' } },
       },
     },
     MuiLink: { styleOverrides: { root: { textUnderlineOffset: 4 } } },

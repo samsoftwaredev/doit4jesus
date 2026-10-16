@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { Brand } from '../atoms/Brand';
-import { ThemeToggle } from '../atoms/ThemeToggle';
 import { LanguageSelector } from '../molecules/LanguageSelector';
 import { appUrl, content, pathFor, resourcesUrl, type Locale, type Page } from '@/content/site';
 
@@ -21,7 +20,6 @@ export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
           <a href={appUrl}>{t.login}</a>
         </Box>
         <Box className="header-actions">
-          <ThemeToggle locale={locale} />
           <LanguageSelector locale={locale} page={page} />
           <details className="mobile-menu">
             <summary aria-label={t.menu} title={t.menu}><span aria-hidden="true" className="hamburger-lines"><i /><i /><i /></span></summary>
