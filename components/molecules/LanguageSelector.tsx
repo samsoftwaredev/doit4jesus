@@ -12,7 +12,7 @@ export function LanguageSelector({ locale, page }: { locale: Locale; page: Page 
       </summary>
       <div className="language-options">
         <Link href={pathFor('en', page)} hrefLang="en" lang="en"><span aria-hidden="true">🇺🇸</span> English</Link>
-        <Link href={pathFor('es', page)} hrefLang="es" lang="es"><span aria-hidden="true">🇪🇸</span> Español</Link>
+        <Link href={pathFor('es', page === 'features' ? 'home' : page)} hrefLang="es" lang="es"><span aria-hidden="true">🇪🇸</span> {page === 'features' ? 'Español · Inicio' : 'Español'}</Link>
       </div>
     </details>
   );

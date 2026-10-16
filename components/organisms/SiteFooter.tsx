@@ -25,6 +25,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         </Box>
         <Box component="nav" aria-label={locale === 'en' ? 'Footer navigation' : 'Navegación del pie de página'} className="footer-links">
           <Link href={pathFor(locale, 'about')}>{t.nav.about}</Link>
+          <Link href={pathFor('en', 'features')}>{t.nav.features}</Link>
           <a href={resourcesUrl}>{t.nav.resources}</a>
           <a href="mailto:admin@doit4jesus.com">{t.footer.contact}</a>
           <Link href={pathFor(locale, 'terms')}>{t.footer.terms}</Link>

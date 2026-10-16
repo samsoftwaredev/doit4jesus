@@ -1,18 +1,18 @@
 export type Locale = 'en' | 'es';
-export type Page = 'home' | 'about' | 'terms' | 'privacy';
+export type Page = 'home' | 'features' | 'about' | 'terms' | 'privacy';
 
 export const siteUrl = 'https://doit4jesus.com';
 export const appUrl = 'https://app.doit4jesus.com/';
 export const resourcesUrl = 'https://app.doit4jesus.com/resources';
 
 export const pathFor = (locale: Locale, page: Page): string => {
-  const path = { home: '', about: '/about', terms: '/terms-of-service', privacy: '/privacy-policy' }[page];
+  const path = { home: '', features: '/features', about: '/about', terms: '/terms-of-service', privacy: '/privacy-policy' }[page];
   return `${locale === 'es' ? '/es' : ''}${path}` || '/';
 };
 
 export const content = {
   en: {
-    nav: { about: 'About', resources: 'Resources', why: 'Why Pray The Rosary?', login: 'Log In', language: 'English', menu: 'Open menu', closeMenu: 'Close menu' },
+    nav: { about: 'About', features: 'Features', resources: 'Resources', why: 'Why Pray The Rosary?', login: 'Log In', language: 'English', menu: 'Open menu', closeMenu: 'Close menu' },
     footer: { rights: 'All rights reserved.', contact: 'Contact Us', terms: 'Terms of Service', privacy: 'Privacy Policy' },
     home: {
       title: 'The Rosary Gamified',
@@ -48,7 +48,7 @@ export const content = {
     legal: { draft: '', effective: 'Effective date: June 8, 2024', contact: 'Questions? Contact' },
   },
   es: {
-    nav: { about: 'Acerca de', resources: 'Recursos', why: '¿Por qué rezar el Rosario?', login: 'Iniciar sesión', language: 'Español', menu: 'Abrir menú', closeMenu: 'Cerrar menú' },
+    nav: { about: 'Acerca de', features: 'Funciones', resources: 'Recursos', why: '¿Por qué rezar el Rosario?', login: 'Iniciar sesión', language: 'Español', menu: 'Abrir menú', closeMenu: 'Cerrar menú' },
     footer: { rights: 'Todos los derechos reservados.', contact: 'Contáctanos', terms: 'Términos de servicio', privacy: 'Política de privacidad' },
     home: {
       title: 'El Rosario hecho juego',

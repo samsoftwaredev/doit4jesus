@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: [Locale, Page][] = [
-    ['en', 'home'], ['es', 'home'], ['en', 'about'], ['es', 'about'], ['en', 'terms'], ['en', 'privacy'],
+    ['en', 'home'], ['es', 'home'], ['en', 'features'], ['en', 'about'], ['es', 'about'], ['en', 'terms'], ['en', 'privacy'],
   ];
   return routes.map(([locale, page]) => ({
     url: `${siteUrl}${pathFor(locale, page)}`,
