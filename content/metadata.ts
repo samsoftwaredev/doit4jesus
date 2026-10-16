@@ -3,13 +3,13 @@ import { pathFor, siteUrl, type Locale, type Page } from './site';
 
 const copy = {
   en: {
-    home: { title: 'Pray the Rosary Together | DoIt4Jesus', description: 'Build a daily Rosary habit with guided prayer, challenges, progress, and a community growing together in faith.' },
+    home: { title: 'The Rosary Gamified | DoIt4Jesus Rosary App', description: 'Pray the Rosary with guidance, challenges, community, and milestones. Level up in faith with the DoIt4Jesus Catholic prayer app.' },
     about: { title: 'About DoIt4Jesus | Our Rosary Prayer Mission', description: 'Learn why DoIt4Jesus brings people together through Rosary prayer, faith, and community.' },
     terms: { title: 'Terms of Service | DoIt4Jesus', description: 'Read the terms that govern use of the DoIt4Jesus Rosary app and community.' },
     privacy: { title: 'Privacy Policy | DoIt4Jesus', description: 'Learn how DoIt4Jesus collects, uses, protects, and shares personal information.' },
   },
   es: {
-    home: { title: 'Reza el Rosario en comunidad | DoIt4Jesus', description: 'Haz del Rosario un hábito diario con oración guiada, desafíos, seguimiento de tu progreso y una comunidad de fe.' },
+    home: { title: 'El Rosario hecho juego | DoIt4Jesus', description: 'Reza el Rosario con guía, desafíos, comunidad y logros. Avanza en la fe con la aplicación católica DoIt4Jesus.' },
     about: { title: 'Acerca de DoIt4Jesus | Nuestra misión', description: 'Conoce por qué DoIt4Jesus reúne a las personas a través del Rosario, la fe y la comunidad.' },
     terms: { title: 'Términos de servicio | DoIt4Jesus', description: 'Borrador de la traducción al español de los términos de servicio de DoIt4Jesus.' },
     privacy: { title: 'Política de privacidad | DoIt4Jesus', description: 'Borrador de la traducción al español de la política de privacidad de DoIt4Jesus.' },

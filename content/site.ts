@@ -3,6 +3,7 @@ export type Page = 'home' | 'about' | 'terms' | 'privacy';
 
 export const siteUrl = 'https://doit4jesus.com';
 export const appUrl = 'https://app.doit4jesus.com/';
+export const resourcesUrl = 'https://app.doit4jesus.com/resources';
 
 export const pathFor = (locale: Locale, page: Page): string => {
   const path = { home: '', about: '/about', terms: '/terms-of-service', privacy: '/privacy-policy' }[page];
@@ -11,34 +12,30 @@ export const pathFor = (locale: Locale, page: Page): string => {
 
 export const content = {
   en: {
-    nav: { home: 'Home', about: 'About', features: 'Features', login: 'Log in', signup: 'Sign up', app: 'Open the app', language: 'Español' },
-    footer: { tagline: 'Make room for prayer, one day at a time.', pages: 'Explore', legal: 'Legal', rights: 'All rights reserved.' },
+    nav: { about: 'About', resources: 'Resources', why: 'Why Pray The Rosary?', login: 'Log In', language: 'English', menu: 'Open menu', closeMenu: 'Close menu' },
+    footer: { rights: 'All rights reserved.', contact: 'Contact Us', terms: 'Terms of Service', privacy: 'Privacy Policy' },
     home: {
-      eyebrow: 'A prayer journey worth sharing',
-      title: 'The Rosary, made part of your everyday life.',
-      description: 'DoIt4Jesus is a Catholic Rosary app that brings prayer, challenges, and progress together. Pray with purpose, grow in faith, and stay connected to a community that keeps showing up.',
-      primary: 'Start praying', secondary: 'Discover how it works',
-      heroNote: 'A more meaningful daily rhythm',
-      introEyebrow: 'Rooted in prayer',
-      introTitle: 'A simple way to begin. A community to keep you going.',
-      introBody: 'Whether the Rosary is already part of your day or you are learning one prayer at a time, DoIt4Jesus helps you return to it with intention.',
-      featuresEyebrow: 'Grow with DoIt4Jesus',
-      featuresTitle: 'Everything you need to make prayer a habit.',
+      title: 'The Rosary Gamified',
+      description: 'Level up in faith and grow closer to God through prayer and games.',
+      primary: 'Get Started',
+      featuresTitle: 'The Rosary App',
       features: [
-        { title: 'Pray the Rosary', body: 'Follow a guided Rosary experience and make space to reflect on the mysteries of Christ.', image: '/assets/mary-moon.jpeg', alt: 'Illustration of Mary beneath moonlight' },
-        { title: 'Take on challenges', body: 'Find fresh reasons to show up for prayer and build a consistent daily practice.', image: '/assets/jesus-praying.jpeg', alt: 'Illustration of Jesus in prayer' },
-        { title: 'See your progress', body: 'Follow your prayer journey with milestones that celebrate your commitment.', image: '/assets/joseph-praying.jpeg', alt: 'Illustration of Saint Joseph praying' },
+        { title: 'Pray Like a Warrior', body: 'Turn daily prayer into a spiritual battle plan. With in-app guidance, every Hail Mary becomes a strike against darkness.', image: '/assets/mary-moon.jpeg', alt: 'Illustration of Mary in prayer beneath the sky' },
+        { title: 'A Global Prayer Squad', body: 'Connect with Catholics around the world and pray the Rosary together in a community of faith.', image: '/assets/jesus-praying.jpeg', alt: 'Illustration of Jesus with eyes closed' },
+        { title: 'Level Up Your Faith', body: 'Track your spiritual growth, unlock milestones, and stay motivated through a gamified Rosary experience.', image: '/assets/joseph-praying.jpeg', alt: 'Illustration of Saint Joseph praying' },
       ],
-      journeyEyebrow: 'A path forward', journeyTitle: 'Prayer grows one day at a time.',
-      journeyBody: 'Begin with a single Rosary. Return tomorrow. Find encouragement in each challenge and celebrate the progress that comes from being present.',
-      journeySteps: [
-        { number: '01', title: 'Begin in prayer', body: 'Choose a mystery and take a few quiet moments with the Rosary.' },
-        { number: '02', title: 'Keep showing up', body: 'Daily challenges give your practice a gentle rhythm.' },
-        { number: '03', title: 'Grow together', body: 'Share in a community of people praying toward the same hope.' },
+      weaponTitle: 'A Powerful Weapon',
+      weaponBody: 'Fr. Don Calloway describes the Rosary as a spiritual weapon. In the face of temptation and darkness, its familiar prayers can train us in courage, faith, and perseverance.',
+      videoTitle: 'A video about the power of the Rosary',
+      aboutTitle: 'About the Rosary',
+      aboutBody: "The Rosary isn’t just beads and prayers—it is a spiritual weapon. When we pray it together, we join one another in pushing back darkness and interceding for souls. According to Catholic tradition, Mary gave St. Dominic the Rosary as a way to strengthen the faithful in spiritual battle.",
+      whyTitle: 'Why Pray The Rosary?',
+      benefits: [
+        { number: '1', title: 'Strengthen Faith', body: 'Join our community on a transformative journey, praying the Rosary together for spiritual fortitude.' },
+        { number: '2', title: 'Save Souls', body: 'Through the Rosary, we intercede for souls and ask God to show mercy and grace.' },
+        { number: '3', title: 'Combat Darkness', body: 'Praying with others strengthens our spiritual defense against temptation and darkness.' },
       ],
-      communityEyebrow: 'You are not alone', communityTitle: 'A community gathered in faith.',
-      communityBody: 'Connect with others who pray the Rosary, encourage one another, and make room for faith in ordinary life.',
-      ctaTitle: 'Your next prayer can begin today.', ctaBody: 'Take the next step in your Rosary journey with DoIt4Jesus.', ctaButton: 'Open DoIt4Jesus',
+      ctaTitle: 'Battle Evil, One Bead at a Time!', ctaButton: 'Sign Up',
     },
     about: {
       eyebrow: 'Our mission', title: 'Pray together. Grow closer to Christ.',
@@ -51,34 +48,30 @@ export const content = {
     legal: { draft: '', effective: 'Effective date: June 8, 2024', contact: 'Questions? Contact' },
   },
   es: {
-    nav: { home: 'Inicio', about: 'Acerca de', features: 'Funciones', login: 'Iniciar sesión', signup: 'Registrarse', app: 'Abrir la app', language: 'English' },
-    footer: { tagline: 'Haz espacio para la oración, día a día.', pages: 'Explorar', legal: 'Información legal', rights: 'Todos los derechos reservados.' },
+    nav: { about: 'Acerca de', resources: 'Recursos', why: '¿Por qué rezar el Rosario?', login: 'Iniciar sesión', language: 'Español', menu: 'Abrir menú', closeMenu: 'Cerrar menú' },
+    footer: { rights: 'Todos los derechos reservados.', contact: 'Contáctanos', terms: 'Términos de servicio', privacy: 'Política de privacidad' },
     home: {
-      eyebrow: 'Un camino de oración para compartir',
-      title: 'El Rosario, parte de tu vida cotidiana.',
-      description: 'DoIt4Jesus es una aplicación católica del Rosario que une la oración, los desafíos y tu progreso. Reza con propósito, crece en la fe y mantente cerca de una comunidad que persevera.',
-      primary: 'Comienza a rezar', secondary: 'Descubre cómo funciona',
-      heroNote: 'Un ritmo diario con más sentido',
-      introEyebrow: 'Arraigados en la oración',
-      introTitle: 'Una forma sencilla de empezar. Una comunidad que te acompaña.',
-      introBody: 'Si el Rosario ya forma parte de tu día, o si estás aprendiendo una oración a la vez, DoIt4Jesus te ayuda a volver a él con intención.',
-      featuresEyebrow: 'Crece con DoIt4Jesus',
-      featuresTitle: 'Todo lo que necesitas para hacer de la oración un hábito.',
+      title: 'El Rosario hecho juego',
+      description: 'Avanza en la fe y acércate más a Dios por medio de la oración y los desafíos.',
+      primary: 'Comienza ahora',
+      featuresTitle: 'La aplicación del Rosario',
       features: [
-        { title: 'Reza el Rosario', body: 'Sigue una experiencia guiada y dedica tiempo a meditar en los misterios de Cristo.', image: '/assets/mary-moon.jpeg', alt: 'Ilustración de María bajo la luz de la luna' },
-        { title: 'Acepta desafíos', body: 'Encuentra nuevos motivos para dedicar tiempo a la oración y cultivar la constancia.', image: '/assets/jesus-praying.jpeg', alt: 'Ilustración de Jesús en oración' },
-        { title: 'Observa tu progreso', body: 'Sigue tu camino de oración con logros que celebran tu compromiso.', image: '/assets/joseph-praying.jpeg', alt: 'Ilustración de san José rezando' },
+        { title: 'Reza como un guerrero', body: 'Convierte la oración diaria en un plan de batalla espiritual. Con la guía de la app, cada Ave María se vuelve un golpe contra la oscuridad.', image: '/assets/mary-moon.jpeg', alt: 'Ilustración de María en oración bajo el cielo' },
+        { title: 'Un equipo mundial de oración', body: 'Conecta con católicos de todo el mundo y recen el Rosario juntos como comunidad de fe.', image: '/assets/jesus-praying.jpeg', alt: 'Ilustración de Jesús con los ojos cerrados' },
+        { title: 'Eleva tu fe', body: 'Sigue tu crecimiento espiritual, alcanza metas y mantén la motivación con una experiencia del Rosario que reconoce tu constancia.', image: '/assets/joseph-praying.jpeg', alt: 'Ilustración de san José rezando' },
       ],
-      journeyEyebrow: 'Un camino por delante', journeyTitle: 'La oración crece día a día.',
-      journeyBody: 'Empieza con un solo Rosario. Vuelve mañana. Encuentra ánimo en cada desafío y celebra el progreso que nace de estar presente.',
-      journeySteps: [
-        { number: '01', title: 'Comienza en oración', body: 'Elige un misterio y dedica unos momentos de calma al Rosario.' },
-        { number: '02', title: 'Persevera cada día', body: 'Los desafíos diarios le dan un ritmo amable a tu práctica.' },
-        { number: '03', title: 'Crezcan juntos', body: 'Comparte con una comunidad que reza con la misma esperanza.' },
+      weaponTitle: 'Un arma poderosa',
+      weaponBody: 'El P. Don Calloway describe el Rosario como un arma espiritual. Frente a la tentación y la oscuridad, sus oraciones nos forman en el valor, la fe y la perseverancia.',
+      videoTitle: 'Un video sobre el poder del Rosario',
+      aboutTitle: 'Acerca del Rosario',
+      aboutBody: 'El Rosario no son solo cuentas y oraciones: es un arma espiritual. Cuando rezamos juntos, nos unimos para rechazar la oscuridad e interceder por las almas. Según la tradición católica, María entregó el Rosario a santo Domingo para fortalecer a los fieles en la batalla espiritual.',
+      whyTitle: '¿Por qué rezar el Rosario?',
+      benefits: [
+        { number: '1', title: 'Fortalece la fe', body: 'Únete a nuestra comunidad en un camino transformador y reza el Rosario con otros para fortalecerte espiritualmente.' },
+        { number: '2', title: 'Salva almas', body: 'Por medio del Rosario intercedemos por las almas y pedimos a Dios misericordia y gracia.' },
+        { number: '3', title: 'Combate la oscuridad', body: 'Rezar con otras personas fortalece nuestra defensa espiritual frente a la tentación y la oscuridad.' },
       ],
-      communityEyebrow: 'No estás solo', communityTitle: 'Una comunidad unida en la fe.',
-      communityBody: 'Conecta con otras personas que rezan el Rosario, anímense mutuamente y hagan espacio para la fe en la vida diaria.',
-      ctaTitle: 'Tu próxima oración puede comenzar hoy.', ctaBody: 'Da el siguiente paso en tu camino con el Rosario y DoIt4Jesus.', ctaButton: 'Abrir DoIt4Jesus',
+      ctaTitle: '¡Combate el mal, una cuenta a la vez!', ctaButton: 'Regístrate',
     },
     about: {
       eyebrow: 'Nuestra misión', title: 'Recemos juntos. Acerquémonos a Cristo.',

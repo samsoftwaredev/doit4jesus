@@ -1,12 +1,10 @@
 import Link from 'next/link';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Image from 'next/image';
 
-export function Brand({ href = '/', label = 'DoIt4Jesus home' }: { href?: string; label?: string }) {
+export function Brand({ href = '/', label = 'DoIt4Jesus home', inverse = false }: { href?: string; label?: string; inverse?: boolean }) {
   return (
-    <Link href={href} className="brand" aria-label={label}>
-      <Box className="brand-mark" aria-hidden="true"><span>✝</span></Box>
-      <Typography component="span" className="brand-name">DoIt4Jesus</Typography>
+    <Link href={href} className={`brand${inverse ? ' brand-inverse' : ''}`} aria-label={label}>
+      <Image className="brand-logo" src={inverse ? '/assets/logo-white.svg' : '/assets/logo-black.svg'} alt="" width={132} height={70} priority />
     </Link>
   );
 }

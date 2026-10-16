@@ -1,20 +1,22 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, type PaletteMode } from '@mui/material/styles';
 
-export const theme = createTheme({
+export const getTheme = (mode: PaletteMode) => createTheme({
   palette: {
-    mode: 'light',
-    primary: { main: '#173c58', dark: '#0d293f', light: '#527993', contrastText: '#fff' },
+    mode,
+    primary: mode === 'light'
+      ? { main: '#173c58', dark: '#0d293f', light: '#527993', contrastText: '#fff' }
+      : { main: '#8db3cb', dark: '#5f8fac', light: '#bad2e1', contrastText: '#0d2539' },
     secondary: { main: '#a77c77', light: '#ead9d2', dark: '#805a58' },
-    background: { default: '#fcfaf7', paper: '#fff' },
-    text: { primary: '#183147', secondary: '#526370' },
-    divider: '#e4e7e6',
+    background: mode === 'light' ? { default: '#fafaf8', paper: '#fff' } : { default: '#101d2a', paper: '#172a3b' },
+    text: mode === 'light' ? { primary: '#252525', secondary: '#4d5d69' } : { primary: '#f5f5f2', secondary: '#c4d0d9' },
+    divider: mode === 'light' ? '#e4e7e6' : '#3b5162',
   },
   typography: {
-    fontFamily: 'Arial, Helvetica, sans-serif',
-    h1: { fontFamily: 'Georgia, Times New Roman, serif', fontWeight: 700, letterSpacing: '-0.045em', lineHeight: 1.09 },
-    h2: { fontFamily: 'Georgia, Times New Roman, serif', fontWeight: 700, letterSpacing: '-0.035em', lineHeight: 1.14 },
-    h3: { fontFamily: 'Georgia, Times New Roman, serif', fontWeight: 700, letterSpacing: '-0.02em' },
-    h4: { fontFamily: 'Georgia, Times New Roman, serif', fontWeight: 700 },
+    fontFamily: 'var(--font-geist-sans), Arial, Helvetica, sans-serif',
+    h1: { fontWeight: 700, letterSpacing: '-0.045em', lineHeight: 1.1 },
+    h2: { fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1.15 },
+    h3: { fontWeight: 700, letterSpacing: '-0.03em' },
+    h4: { fontWeight: 700 },
     body1: { lineHeight: 1.75 },
     body2: { lineHeight: 1.65 },
     button: { textTransform: 'none', fontWeight: 700, letterSpacing: 0 },
@@ -24,8 +26,8 @@ export const theme = createTheme({
     MuiButton: {
       defaultProps: { disableElevation: true },
       styleOverrides: {
-        root: { borderRadius: 999, minHeight: 48, paddingInline: 25 },
-        containedPrimary: { '&:hover': { backgroundColor: '#0d293f' } },
+        root: { borderRadius: 999, minHeight: 44, paddingInline: 25, transition: 'transform 200ms ease, filter 200ms ease, background-color 200ms ease', '&:hover': { transform: 'scale(1.035)' } },
+        containedPrimary: { '&:hover': { backgroundColor: mode === 'light' ? '#0d293f' : '#b0cee0' } },
       },
     },
     MuiLink: { styleOverrides: { root: { textUnderlineOffset: 4 } } },
