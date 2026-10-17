@@ -301,15 +301,15 @@ summary:focus-visible {
   background: var(--paper);
 }
 .app-features-section h2 {
-  margin-bottom: 66px;
+  margin-bottom: 58px;
   text-align: center;
   color: var(--ink);
   font-size: clamp(2.5rem, 4.4vw, 4rem);
 }
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(25px, 4vw, 65px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2.5vw, 34px);
 }
 .feature-card {
   min-width: 0;
@@ -320,22 +320,41 @@ summary:focus-visible {
   transform: translateY(-4px);
 }
 .feature-image-wrap {
+  display: block;
   overflow: hidden;
-  max-width: 295px;
-  height: 352px;
+  max-width: 278px;
+  height: 420px;
   margin: 0 auto 28px;
-  border: 8px solid #c8a8a0;
-  border-bottom-width: 6px;
-  border-radius: 170px 170px 12px 12px;
-  background: #e5d8d5;
-  box-shadow: 0 7px 20px rgba(29, 56, 74, 0.08);
+  border: 10px solid #c5a39a;
+  border-radius: 999px 999px 0 0;
+  background: #0a1f2d;
+  box-shadow: 0 19px 36px rgba(10, 35, 52, 0.18);
+  text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.feature-image-wrap:hover,
+.feature-image-wrap:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 45px rgba(10, 35, 52, 0.24);
 }
 .feature-image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center top;
+}
+.feature-image-wrap-garden .feature-image {
+  object-position: center 39%;
+}
+.feature-image-wrap-home .feature-image {
+  object-position: center 7%;
+}
+.feature-image-wrap-community .feature-image {
+  object-position: center 70%;
+}
+.feature-image-wrap-rosary .feature-image {
+  object-position: center top;
 }
 .feature-copy {
   max-width: 315px;
@@ -346,10 +365,50 @@ summary:focus-visible {
   color: var(--ink);
   font-size: clamp(1.38rem, 1.75vw, 1.65rem);
 }
+.feature-copy h3 a {
+  text-decoration: none;
+}
 .feature-copy p {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.75;
+}
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 15px;
+  color: #356d89;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+}
+.feature-link span {
+  transition: transform 180ms ease;
+}
+.feature-link:hover span {
+  transform: translateX(3px);
+}
+
+/* Real app captures */
+.app-screen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.app-screen-garden {
+  object-position: center 39%;
+}
+.app-screen-global {
+  object-position: center bottom;
+}
+.app-screen-home {
+  object-position: center 6%;
+}
+.app-screen-community {
+  object-position: center 70%;
 }
 
 /* Video */
@@ -786,6 +845,58 @@ summary:focus-visible {
   align-self: end;
   height: 665px;
 }
+.features-app-device {
+  position: absolute;
+  overflow: hidden;
+  border: 7px solid #071d2b;
+  background: #071d2b;
+  box-shadow: 0 28px 55px rgba(2, 17, 28, 0.38);
+}
+.features-app-device-main {
+  z-index: 2;
+  right: 18px;
+  bottom: -70px;
+  width: min(350px, 72%);
+  height: 635px;
+  border-radius: 42px 42px 0 0;
+}
+.features-app-device-secondary {
+  z-index: 1;
+  bottom: -95px;
+  left: 8px;
+  width: min(220px, 46%);
+  height: 475px;
+  border-radius: 34px 34px 0 0;
+  transform: rotate(-5deg);
+  transform-origin: bottom center;
+  opacity: 0.96;
+}
+.features-app-label {
+  position: absolute;
+  z-index: 3;
+  top: 84px;
+  right: -5px;
+  width: 190px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 15px;
+  background: rgba(246, 249, 250, 0.94);
+  color: #123951;
+  box-shadow: 0 18px 42px rgba(5, 27, 43, 0.2);
+}
+.features-app-label span {
+  display: block;
+  margin-bottom: 7px;
+  color: #6c8797;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.features-app-label strong {
+  font-size: 15px;
+  line-height: 1.35;
+}
 .features-phone {
   position: absolute;
   z-index: 1;
@@ -894,6 +1005,100 @@ summary:focus-visible {
 .feature-navigation a:focus-visible {
   background: #dfeaf0;
   color: #153e5f;
+}
+.app-preview-tour {
+  padding: 118px 0 124px;
+  background: #edf2f4;
+}
+.app-preview-heading {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.app-preview-heading h2 {
+  color: var(--ink);
+  font-size: clamp(2.55rem, 4.25vw, 4.2rem);
+}
+.app-preview-heading > p {
+  margin: 20px auto 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+.app-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.app-preview-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #d4dfe4;
+  border-radius: 25px;
+  background: var(--paper);
+  box-shadow: 0 13px 30px rgba(17, 48, 68, 0.06);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.app-preview-card:hover,
+.app-preview-card:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 38px rgba(17, 48, 68, 0.12);
+}
+.app-preview-visual {
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  max-height: 600px;
+  aspect-ratio: 1 / 1;
+  padding: 24px 24px 0;
+  background: linear-gradient(150deg, #173f5c, #58788b);
+}
+.app-preview-visual-split {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+.app-preview-crop {
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  border: 5px solid #092333;
+  border-bottom: 0;
+  border-radius: 25px 25px 0 0;
+  background: #092333;
+  box-shadow: 0 15px 30px rgba(2, 17, 28, 0.25);
+}
+.app-preview-copy {
+  padding: 32px 32px 36px;
+}
+.app-preview-copy > span {
+  color: #8cabb9;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.app-preview-copy h3 {
+  margin: 14px 0 13px;
+  color: #173b55;
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+  line-height: 1.2;
+}
+.app-preview-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.app-preview-copy strong {
+  display: inline-block;
+  margin-top: 22px;
+  color: #9a716d;
+  font-size: 13px;
 }
 .detail-feature-section {
   scroll-margin-top: 70px;
@@ -1252,13 +1457,29 @@ summary:focus-visible {
     font-size: 13px;
   }
   .feature-grid {
-    gap: 25px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 52px 30px;
+  }
+  .feature-copy {
+    max-width: 360px;
   }
   .features-hero-inner {
     gap: 12px;
   }
   .features-phone {
     right: -30px;
+  }
+  .features-app-device-main {
+    right: 0;
+  }
+  .features-app-device-secondary {
+    left: -5px;
+  }
+  .features-app-label {
+    right: -15px;
+  }
+  .app-preview-copy {
+    padding: 28px 24px;
   }
   .hero-preview-scripture {
     left: -15px;
@@ -1286,7 +1507,8 @@ summary:focus-visible {
     margin-bottom: -110px;
   }
   .feature-image-wrap {
-    height: 290px;
+    width: min(300px, 100%);
+    height: 440px;
   }
   .feature-copy h3 {
     font-size: 21px;
@@ -1326,6 +1548,19 @@ summary:focus-visible {
   .features-hero-art {
     height: 565px;
   }
+  .features-app-device-main {
+    width: min(300px, 72%);
+    height: 555px;
+  }
+  .features-app-device-secondary {
+    width: min(185px, 45%);
+    height: 405px;
+  }
+  .features-app-label {
+    top: 76px;
+    width: 160px;
+    padding: 13px 14px;
+  }
   .hero-preview {
     width: 165px;
     padding: 13px;
@@ -1345,6 +1580,11 @@ summary:focus-visible {
   }
   .features-faq-inner {
     gap: 45px;
+  }
+  .app-preview-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin: 0 auto;
   }
 }
 
@@ -1384,8 +1624,8 @@ summary:focus-visible {
     gap: 65px;
   }
   .feature-image-wrap {
-    width: min(280px, 78vw);
-    height: 338px;
+    width: min(300px, 78vw);
+    height: 465px;
   }
   .feature-copy h3 {
     font-size: 25px;
@@ -1481,6 +1721,24 @@ summary:focus-visible {
     width: min(550px, 100%);
     height: 460px;
   }
+  .features-app-device-main {
+    right: 8%;
+    bottom: -95px;
+    width: 58%;
+    height: 500px;
+    border-radius: 34px 34px 0 0;
+  }
+  .features-app-device-secondary {
+    bottom: -108px;
+    left: 8%;
+    width: 36%;
+    height: 365px;
+    border-radius: 28px 28px 0 0;
+  }
+  .features-app-label {
+    top: 45px;
+    right: 1%;
+  }
   .features-phone {
     right: 5%;
     bottom: -120px;
@@ -1509,6 +1767,21 @@ summary:focus-visible {
   }
   .feature-navigation a {
     padding: 9px 11px;
+  }
+  .app-preview-tour {
+    padding: 80px 0 86px;
+  }
+  .app-preview-heading {
+    margin-bottom: 34px;
+  }
+  .app-preview-heading > p {
+    font-size: 16px;
+  }
+  .app-preview-visual {
+    padding: 17px 17px 0;
+  }
+  .app-preview-copy {
+    padding: 25px 21px;
   }
   .detail-feature-section {
     scroll-margin-top: 90px;
@@ -1629,6 +1902,29 @@ summary:focus-visible {
   .features-hero-art {
     height: 355px;
   }
+  .features-app-device-main {
+    right: 4%;
+    width: 62%;
+    height: 390px;
+    border-width: 5px;
+    border-radius: 27px 27px 0 0;
+  }
+  .features-app-device-secondary {
+    left: 2%;
+    width: 39%;
+    height: 280px;
+    border-width: 5px;
+    border-radius: 23px 23px 0 0;
+  }
+  .features-app-label {
+    top: 28px;
+    right: 0;
+    width: 130px;
+    padding: 10px 11px;
+  }
+  .features-app-label strong {
+    font-size: 11px;
+  }
   .features-phone {
     bottom: -90px;
     width: 76%;
@@ -1655,6 +1951,19 @@ summary:focus-visible {
   }
   .features-difference-card {
     padding: 29px 26px;
+  }
+  .app-preview-card {
+    min-height: 0;
+  }
+  .app-preview-visual {
+    height: auto;
+    padding: 15px 15px 0;
+  }
+  .app-preview-visual-split {
+    padding-right: 15px;
+  }
+  .app-preview-copy {
+    padding: 26px 24px 30px;
   }
 }
 

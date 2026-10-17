@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { FeatureCategory } from '@/components/features/FeatureCategory';
 import { FeatureNavigation } from '@/components/features/FeatureNavigation';
+import { AppPreviewTour } from '@/components/features/AppPreviewTour';
 import { FeaturesCTA } from '@/components/features/FeaturesCTA';
 import { FeaturesFAQ } from '@/components/features/FeaturesFAQ';
 import { FeaturesHero } from '@/components/features/FeaturesHero';
@@ -40,6 +41,7 @@ export default function FeaturesPage() {
     <JsonLd data={faqSchema} /><JsonLd data={appSchema} /><JsonLd data={breadcrumbSchema} />
     <FeaturesHero />
     <FeatureNavigation />
+    <AppPreviewTour />
     {publishedFeatureCategories.map((category, index) => <div key={category.id}>
       {index === 4 && <FeaturesCTA />}
       <FeatureCategory category={category} index={index} />

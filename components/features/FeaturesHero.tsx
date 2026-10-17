@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import { AppScreen } from '@/components/atoms/AppScreen';
 import { appUrl } from '@/content/site';
 
 export function FeaturesHero() {
@@ -18,13 +18,13 @@ export function FeaturesHero() {
         <p className="features-hero-note">Prayer is the purpose. Progress is here to help you keep going.</p>
       </div>
       <div className="features-hero-art">
-        <div className="hero-preview hero-preview-scripture" aria-hidden="true">
-          <span>DAILY SCRIPTURE</span><strong>Today’s readings</strong><small>First Reading · Psalm · Gospel</small><i aria-hidden="true" />
+        <div className="features-app-device features-app-device-secondary">
+          <AppScreen screen="rosary" sizes="(max-width: 700px) 35vw, 220px" />
         </div>
-        <Image src="/assets/phone-hand.svg" alt="Hand holding a phone showing the DoIt4Jesus Catholic app" width={735} height={943} priority sizes="(max-width: 700px) 78vw, (max-width: 1100px) 40vw, 480px" className="features-phone" />
-        <div className="hero-preview hero-preview-progress" aria-hidden="true">
-          <span>PRAYER PROGRESS</span><strong>Keep showing up</strong><small>Rosary · Scripture · Community</small><i aria-hidden="true" />
+        <div className="features-app-device features-app-device-main">
+          <AppScreen screen="home" sizes="(max-width: 700px) 58vw, 350px" priority />
         </div>
+        <div className="features-app-label" aria-hidden="true"><span>Actual app</span><strong>Your prayer journey, at a glance</strong></div>
       </div>
     </Container>
   </section>;

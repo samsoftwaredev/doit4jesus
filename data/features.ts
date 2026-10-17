@@ -19,7 +19,7 @@ export type FeatureCategory = {
 
 /** Switch a flag on only after the corresponding user-facing app feature is verified. */
 export const futureFeatureFlags = {
-  rosaryGarden: false,
+  rosaryGarden: true,
   catholicKnowledgeLessons: false,
   catholicQuizzes: false,
   spiritualBattle: false,
