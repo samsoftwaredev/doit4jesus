@@ -1,5 +1,6 @@
 import { AboutRosarySection } from '../organisms/AboutRosarySection';
 import { AppFeatureSection } from '../organisms/AppFeatureSection';
+import { BeyondRosarySection } from '../organisms/BeyondRosarySection';
 import { FinalCTA } from '../organisms/FinalCTA';
 import { HeroSection } from '../organisms/HeroSection';
 import { PowerfulWeaponSection } from '../organisms/PowerfulWeaponSection';
@@ -28,6 +29,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <RosaryBenefitsSection locale={locale} />
       </div>
       <FinalCTA locale={locale} />
+      <BeyondRosarySection locale={locale} />
     </PublicPageShell>
   );
 }

@@ -37,6 +37,20 @@ export const content = {
         { number: '3', title: 'Combat Darkness', body: 'Praying with others strengthens our spiritual defense against temptation and darkness.' },
       ],
       ctaTitle: 'Battle Evil, One Bead at a Time!', ctaButton: 'Sign Up',
+      beyondRosary: {
+        eyebrow: 'Beyond the Rosary',
+        title: 'More Ways to Grow in Faith',
+        introduction: 'The Rosary is at the heart of DoIt4Jesus, but it is not the whole experience. Keep Scripture, reflection, progress, and Catholic community close throughout your day.',
+        features: [
+          { title: 'Daily Catholic Scripture', body: 'Read the daily Mass readings with their references, liturgical season, and a featured verse for reflection.', icon: 'book', screen: 'scripture', alt: 'Daily Mass and Scripture readings in the DoIt4Jesus app' },
+          { title: 'Examination of Conscience', body: 'Reflect with guided questions for adults, teens, and children as you prepare your heart for Confession.', icon: 'cross', screen: 'conscience', alt: 'An examination of conscience question in the DoIt4Jesus app' },
+          { title: 'Catholic Resources', body: 'Explore faith-focused articles that help you understand Catholic practices and carry prayer into daily life.', icon: 'church', screen: 'resources', alt: 'Faith resources and daily Mass content in the DoIt4Jesus app' },
+          { title: 'XP, Levels & Badges', body: 'Build consistent habits with encouraging milestones that recognize participation without measuring holiness.', icon: 'spark', screen: 'progress', alt: 'Level, points, and XP progress in the DoIt4Jesus app' },
+          { title: 'Friends & Leaderboards', body: 'Connect with Catholic friends and find friendly motivation through community and weekly activity.', icon: 'people', screen: 'community', alt: 'Friends and community leaderboard in the DoIt4Jesus app' },
+          { title: 'Global Prayer Map', body: 'See prayer activity by city and country and discover a worldwide community growing in faith together.', icon: 'globe', screen: 'global', alt: 'Worldwide prayer activity in the DoIt4Jesus app' },
+        ],
+        link: 'Learn more about all features',
+      },
     },
     about: {
       eyebrow: 'Our mission', title: 'Pray together. Grow closer to Christ.',
@@ -74,6 +88,20 @@ export const content = {
         { number: '3', title: 'Combate la oscuridad', body: 'Rezar con otras personas fortalece nuestra defensa espiritual frente a la tentación y la oscuridad.' },
       ],
       ctaTitle: '¡Combate el mal, una cuenta a la vez!', ctaButton: 'Regístrate',
+      beyondRosary: {
+        eyebrow: 'Más allá del Rosario',
+        title: 'Más formas de crecer en la fe',
+        introduction: 'El Rosario está en el corazón de DoIt4Jesus, pero no es toda la experiencia. Mantén cerca la Sagrada Escritura, la reflexión, tu progreso y la comunidad católica durante el día.',
+        features: [
+          { title: 'Lecturas católicas diarias', body: 'Lee las lecturas diarias de la Misa con sus citas, el tiempo litúrgico y un versículo para reflexionar.', icon: 'book', screen: 'scripture', alt: 'La Misa diaria y las lecturas de la Sagrada Escritura en DoIt4Jesus' },
+          { title: 'Examen de conciencia', body: 'Reflexiona con preguntas guiadas para adultos, adolescentes y niños mientras preparas tu corazón para la Confesión.', icon: 'cross', screen: 'conscience', alt: 'Una pregunta del examen de conciencia en DoIt4Jesus' },
+          { title: 'Recursos católicos', body: 'Explora artículos sobre la fe que te ayudan a comprender las prácticas católicas y llevar la oración a la vida diaria.', icon: 'church', screen: 'resources', alt: 'Recursos de fe y contenido de la Misa diaria en DoIt4Jesus' },
+          { title: 'XP, niveles e insignias', body: 'Cultiva hábitos constantes con logros que reconocen tu participación sin intentar medir la santidad.', icon: 'spark', screen: 'progress', alt: 'Niveles, puntos y progreso de XP en DoIt4Jesus' },
+          { title: 'Amigos y clasificaciones', body: 'Conecta con amigos católicos y encuentra una motivación amistosa en la actividad semanal de la comunidad.', icon: 'people', screen: 'community', alt: 'Amigos y clasificación de la comunidad en DoIt4Jesus' },
+          { title: 'Mapa mundial de oración', body: 'Mira la actividad de oración por ciudad y país y descubre una comunidad mundial que crece unida en la fe.', icon: 'globe', screen: 'global', alt: 'Actividad mundial de oración en DoIt4Jesus' },
+        ],
+        link: 'Conoce todas las funciones',
+      },
     },
     about: {
       eyebrow: 'Nuestra misión', title: 'Recemos juntos. Acerquémonos a Cristo.',
