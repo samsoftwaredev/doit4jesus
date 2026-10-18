@@ -3,14 +3,14 @@ import { pathFor, siteUrl, type Locale, type Page } from './site';
 
 const copy = {
   en: {
-    home: { title: 'The Rosary Gamified | DoIt4Jesus Rosary App', description: 'Pray the Rosary with guidance, challenges, community, and milestones. Level up in faith with the DoIt4Jesus Catholic prayer app.' },
+    home: { title: 'Do It for Jesus Every Day | DoIt4Jesus Catholic App', description: 'Do it for Jesus every day with guided Rosary prayer, daily Catholic Scripture, reflection, progress, and community in the DoIt4Jesus app.' },
     features: { title: 'DoIt4Jesus Features | Catholic Prayer, Rosary & Faith App', description: 'Explore Catholic prayer, Rosary tracking, daily Scripture, spiritual growth, achievements, friends, and community features in the DoIt4Jesus faith app.' },
     about: { title: 'About DoIt4Jesus | Our Rosary Prayer Mission', description: 'Learn why DoIt4Jesus brings people together through Rosary prayer, faith, and community.' },
     terms: { title: 'Terms of Service | DoIt4Jesus', description: 'Read the terms that govern use of the DoIt4Jesus Rosary app and community.' },
     privacy: { title: 'Privacy Policy | DoIt4Jesus', description: 'Learn how DoIt4Jesus collects, uses, protects, and shares personal information.' },
   },
   es: {
-    home: { title: 'El Rosario hecho juego | DoIt4Jesus', description: 'Reza el Rosario con guía, desafíos, comunidad y logros. Avanza en la fe con la aplicación católica DoIt4Jesus.' },
+    home: { title: 'Hazlo por Jesús cada día | DoIt4Jesus', description: 'Hazlo por Jesús cada día con el Rosario guiado, la Sagrada Escritura, la reflexión, el progreso y la comunidad católica.' },
     features: { title: 'Funciones de DoIt4Jesus | Oración y Rosario', description: 'Descubre las funciones de oración, Rosario, Escritura, progreso y comunidad de DoIt4Jesus.' },
     about: { title: 'Acerca de DoIt4Jesus | Nuestra misión', description: 'Conoce por qué DoIt4Jesus reúne a las personas a través del Rosario, la fe y la comunidad.' },
     terms: { title: 'Términos de servicio | DoIt4Jesus', description: 'Borrador de la traducción al español de los términos de servicio de DoIt4Jesus.' },

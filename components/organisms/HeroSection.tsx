@@ -10,6 +10,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
   return (
     <section className="hero-section" aria-labelledby="hero-title">
       <Container maxWidth="lg" className="hero-inner">
+        <Typography component="p" className="hero-brand-line">{t.brandLine}</Typography>
         <Typography id="hero-title" component="h1" variant="h1">{t.title}</Typography>
         <Typography className="hero-subtitle">{t.description}</Typography>
         <Button href={appUrl} variant="contained" color="primary" size="large" className="hero-cta">{t.primary}</Button>

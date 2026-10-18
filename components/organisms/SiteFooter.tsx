@@ -11,6 +11,13 @@ const socialLinks = [
   { label: 'YouTube', href: 'https://www.youtube.com/@DoIt4Jesus', icon: <><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" strokeWidth="1.8"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></> },
 ] as const;
 
+const seoLinks = [
+  { label: 'Catholic Prayer App', href: '/catholic-prayer-app' },
+  { label: 'Gamified Rosary App', href: '/gamified-rosary-app' },
+  { label: 'Rosary Tracker', href: '/rosary-tracker-app' },
+  { label: 'Examination of Conscience', href: '/examination-of-conscience-app' },
+] as const;
+
 export function SiteFooter({ locale }: { locale: Locale }) {
   const t = content[locale];
   return (
@@ -32,6 +39,10 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <Link href={pathFor(locale, 'privacy')}>{t.footer.privacy}</Link>
           <a href={appUrl}>{t.nav.login}</a>
         </Box>
+        {locale === 'en' && <Box component="nav" aria-label="Explore DoIt4Jesus guides" className="footer-seo-links">
+          <span>Explore the app</span>
+          {seoLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+        </Box>}
       </Container>
     </Box>
   );

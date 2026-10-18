@@ -1,0 +1,22 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "doit4jesus.com" }],
+      "destination": "https://www.doitforjesus.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.doit4jesus.com" }],
+      "destination": "https://www.doitforjesus.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "doitforjesus.com" }],
+      "destination": "https://www.doitforjesus.com/:path*",
+      "permanent": true
+    }
+  ]
+}

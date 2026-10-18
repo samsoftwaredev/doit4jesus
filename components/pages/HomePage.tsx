@@ -9,14 +9,25 @@ import { PublicPageShell } from '../templates/PublicPageShell';
 import { content, pathFor, siteUrl, type Locale } from '@/content/site';
 
 export function HomePage({ locale }: { locale: Locale }) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'DoIt4Jesus',
-    url: `${siteUrl}${pathFor(locale, 'home')}`,
-    inLanguage: locale === 'en' ? 'en-US' : 'es-ES',
-    description: content[locale].home.description,
-  };
+  const structuredData = locale === 'en'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'DoIt4Jesus',
+        alternateName: ['Do It for Jesus', 'DoIt4Jesus Catholic App'],
+        url: siteUrl,
+        inLanguage: 'en-US',
+        description: content.en.home.description,
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: content.es.home.title,
+        url: `${siteUrl}${pathFor('es', 'home')}`,
+        inLanguage: 'es-ES',
+        description: content.es.home.description,
+        isPartOf: { '@type': 'WebSite', name: 'DoIt4Jesus', url: siteUrl },
+      };
 
   return (
     <PublicPageShell locale={locale} page="home">

@@ -4,31 +4,31 @@ type AppScreenName = 'home' | 'community' | 'garden' | 'global' | 'rosary';
 
 const screens = {
   home: {
-    src: '/assets/app-home.png',
+    src: '/assets/app-home.webp',
     width: 614,
     height: 5430,
     alt: 'DoIt4Jesus dashboard showing prayer streaks and personal progress',
   },
   community: {
-    src: '/assets/app-community.png',
+    src: '/assets/app-community.webp',
     width: 614,
     height: 2632,
     alt: 'DoIt4Jesus community page showing prayer leaderboards',
   },
   garden: {
-    src: '/assets/app-home.png',
+    src: '/assets/app-home.webp',
     width: 614,
     height: 5430,
     alt: 'DoIt4Jesus dashboard showing the Rosary Garden',
   },
   global: {
-    src: '/assets/app-prayer.png',
+    src: '/assets/app-prayer.webp',
     width: 614,
     height: 4330,
     alt: 'DoIt4Jesus prayer page showing the worldwide Rosary count',
   },
   rosary: {
-    src: '/assets/app-rosary.png',
+    src: '/assets/app-rosary.webp',
     width: 614,
     height: 1343,
     alt: 'DoIt4Jesus guided Rosary with the current mystery and prayers',
