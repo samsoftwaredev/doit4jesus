@@ -1,6 +1,6 @@
 # DoIt4Jesus public site
 
-The public marketing site for DoIt4Jesus. It contains the bilingual landing page, About, Terms of Service, and Privacy Policy, plus English feature and search-discovery pages. Prayer, account, and other app experiences live at [app.doit4jesus.com](https://app.doit4jesus.com/).
+The public marketing site for DoIt4Jesus. It contains the bilingual landing page, About, Terms of Service, and Privacy Policy, plus English feature and search-discovery pages. Prayer, account, and other app experiences live at [app.doitforjesus.com](https://app.doitforjesus.com/).
 
 ## Start locally
 
