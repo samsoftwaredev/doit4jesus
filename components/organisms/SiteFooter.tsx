@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { Brand } from '../atoms/Brand';
-import { appUrl, content, pathFor, resourcesUrl, type Locale } from '@/content/site';
+import { content, loginUrl, pathFor, resourcesUrl, type Locale } from '@/content/site';
 
 const socialLinks = [
   { label: 'Facebook', href: 'https://www.facebook.com/people/DoIt4Jesus/61579821511072/', icon: <path d="M14.2 21v-8.1h2.7l.4-3.2h-3.1v-2c0-.9.2-1.5 1.5-1.5h1.7V3.3c-.8-.1-1.6-.2-2.5-.2-2.5 0-4.1 1.5-4.1 4.2v2.4H8v3.2h2.8V21h3.4Z" fill="currentColor" /> },
@@ -37,7 +37,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <a href="mailto:admin@doit4jesus.com">{t.footer.contact}</a>
           <Link href={pathFor(locale, 'terms')}>{t.footer.terms}</Link>
           <Link href={pathFor(locale, 'privacy')}>{t.footer.privacy}</Link>
-          <a href={appUrl}>{t.nav.login}</a>
+          <a href={loginUrl}>{t.nav.login}</a>
         </Box>
         {locale === 'en' && <Box component="nav" aria-label="Explore DoIt4Jesus guides" className="footer-seo-links">
           <span>Explore the app</span>

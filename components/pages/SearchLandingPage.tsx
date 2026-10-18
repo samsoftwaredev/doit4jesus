@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PublicPageShell } from '@/components/templates/PublicPageShell';
 import { seoPagePath, seoPages, type SeoPageSlug } from '@/content/seo-pages';
-import { appUrl, siteUrl } from '@/content/site';
+import { appUrl, signupUrl, siteUrl } from '@/content/site';
 
 const screens = {
   home: { src: '/assets/app-home.webp', width: 614, height: 5430, focus: '59%' },
@@ -150,7 +150,7 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
           <span className="features-kicker">Do it for Jesus, every day</span>
           <Typography component="h2" variant="h2" id="search-cta-title">Begin With One Faithful Choice</Typography>
           <Typography component="p">Pray the Rosary, read today’s Scripture, reflect honestly, and take what you receive into the rest of your life.</Typography>
-          <Button href={appUrl} variant="contained" color="primary" size="large">Get started</Button>
+          <Button href={signupUrl} variant="contained" color="primary" size="large">Get started</Button>
         </Container>
       </section>
     </PublicPageShell>

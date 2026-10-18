@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { AppScreen } from '@/components/atoms/AppScreen';
-import { appUrl } from '@/content/site';
+import { signupUrl } from '@/content/site';
 
 export function FeaturesHero() {
   return <section className="features-hero" aria-labelledby="features-title">
@@ -12,7 +12,7 @@ export function FeaturesHero() {
         <Typography component="h1" variant="h1" id="features-title">Everything You Need to Grow in Your Catholic Faith</Typography>
         <Typography className="features-hero-lead">DoIt4Jesus brings Rosary prayer, daily Scripture, spiritual reflection, community, and faith-based progression together in one Catholic app. Build a steadier relationship with God, one day at a time.</Typography>
         <div className="features-hero-actions">
-          <Button href={appUrl} variant="contained" color="primary" size="large">Get Started</Button>
+          <Button href={signupUrl} variant="contained" color="primary" size="large">Get Started</Button>
           <Button href="#feature-navigation" variant="outlined" size="large" className="features-outline-button">Explore Features</Button>
         </div>
         <p className="features-hero-note">Prayer is the purpose. Progress is here to help you keep going.</p>

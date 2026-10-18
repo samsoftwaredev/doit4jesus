@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { appUrl, content, type Locale } from '@/content/site';
+import { content, signupUrl, type Locale } from '@/content/site';
 
 export function HeroSection({ locale }: { locale: Locale }) {
   const t = content[locale].home;
@@ -13,7 +13,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
         <Typography component="p" className="hero-brand-line">{t.brandLine}</Typography>
         <Typography id="hero-title" component="h1" variant="h1">{t.title}</Typography>
         <Typography className="hero-subtitle">{t.description}</Typography>
-        <Button href={appUrl} variant="contained" color="primary" size="large" className="hero-cta">{t.primary}</Button>
+        <Button href={signupUrl} variant="contained" color="primary" size="large" className="hero-cta">{t.primary}</Button>
         <Box className="hero-product">
           <Image
             src="/assets/phone-hand.svg"

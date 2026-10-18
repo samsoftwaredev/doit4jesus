@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { Brand } from '../atoms/Brand';
 import { LanguageSelector } from '../molecules/LanguageSelector';
-import { appUrl, content, pathFor, resourcesUrl, type Locale, type Page } from '@/content/site';
+import { content, loginUrl, pathFor, resourcesUrl, type Locale, type Page } from '@/content/site';
 
 export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
   const t = content[locale].nav;
@@ -17,7 +17,7 @@ export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
           <Link href={pathFor('en', 'features')}>{t.features}</Link>
           <a href={resourcesUrl}>{t.resources}</a>
           <Link href={whyHref}>{t.why}</Link>
-          <a href={appUrl}>{t.login}</a>
+          <a href={loginUrl}>{t.login}</a>
         </Box>
         <Box className="header-actions">
           <LanguageSelector locale={locale} page={page} />
@@ -28,7 +28,7 @@ export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
               <Link href={pathFor('en', 'features')}>{t.features}</Link>
               <a href={resourcesUrl}>{t.resources}</a>
               <Link href={whyHref}>{t.why}</Link>
-              <a href={appUrl}>{t.login}</a>
+              <a href={loginUrl}>{t.login}</a>
             </nav>
           </details>
         </Box>

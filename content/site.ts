@@ -2,7 +2,9 @@ export type Locale = "en" | "es";
 export type Page = "home" | "features" | "about" | "terms" | "privacy";
 
 export const siteUrl = "https://www.doitforjesus.com";
-export const appUrl = "https://app.doitforjesus.com/";
+export const appUrl = "https://app.doitforjesus.com";
+export const loginUrl = `${appUrl}/login`;
+export const signupUrl = `${appUrl}/signup`;
 export const resourcesUrl = "https://app.doitforjesus.com/resources";
 
 export const pathFor = (locale: Locale, page: Page): string => {
