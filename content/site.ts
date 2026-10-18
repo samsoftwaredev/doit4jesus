@@ -5,7 +5,6 @@ export const siteUrl = "https://www.doitforjesus.com";
 export const appUrl = "https://app.doitforjesus.com";
 export const loginUrl = `${appUrl}/login`;
 export const signupUrl = `${appUrl}/sign-up`;
-export const resourcesUrl = "https://app.doitforjesus.com/resources";
 
 export const pathFor = (locale: Locale, page: Page): string => {
   const path = {
@@ -23,7 +22,6 @@ export const content = {
     nav: {
       about: "About",
       features: "Features",
-      resources: "Resources",
       why: "Why Pray The Rosary?",
       login: "Log In",
       language: "English",
@@ -192,7 +190,6 @@ export const content = {
     nav: {
       about: "Acerca de",
       features: "Funciones",
-      resources: "Recursos",
       why: "¿Por qué rezar el Rosario?",
       login: "Iniciar sesión",
       language: "Español",

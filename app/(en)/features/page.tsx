@@ -11,7 +11,7 @@ import { FeaturesHero } from '@/components/features/FeaturesHero';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PublicPageShell } from '@/components/templates/PublicPageShell';
 import { pageMetadata } from '@/content/metadata';
-import { resourcesUrl, siteUrl } from '@/content/site';
+import { siteUrl } from '@/content/site';
 import { publishedFeatureCategories, featureFaq } from '@/data/features';
 
 export const metadata: Metadata = pageMetadata('en', 'features');
@@ -53,7 +53,7 @@ export default function FeaturesPage() {
           <div className="features-difference-card"><span>One important beginning</span><h3>A simple Rosary tracker</h3><ul><li>Record completed Rosaries</li><li>Notice prayer consistency</li><li>Return to the mysteries</li></ul></div>
           <div className="features-difference-card features-difference-card-highlight"><span>A wider Catholic rhythm</span><h3>DoIt4Jesus</h3><ul><li>Pray the guided Rosary</li><li>Read daily Catholic Mass Scripture</li><li>Reflect with an examination of conscience</li><li>Track prayer and Scripture habits</li><li>See XP, levels, milestones, and badges</li><li>Connect with friends and shared prayer</li><li>Find encouragement in community activity</li></ul></div>
         </div>
-        <p className="features-difference-note">Looking for more reading? Visit our <a href={resourcesUrl}>Catholic resources</a>, learn <Link href="/about">about our mission</Link>, or review how we approach personal information in our <Link href="/privacy-policy">privacy policy</Link>.</p>
+        <p className="features-difference-note">Learn <Link href="/about">about our mission</Link>, or review how we approach personal information in our <Link href="/privacy-policy">privacy policy</Link>.</p>
       </Container>
     </section>
     <section className="features-rhythm" aria-labelledby="features-rhythm-title">

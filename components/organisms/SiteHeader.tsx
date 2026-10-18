@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { Brand } from '../atoms/Brand';
 import { LanguageSelector } from '../molecules/LanguageSelector';
-import { content, loginUrl, pathFor, resourcesUrl, type Locale, type Page } from '@/content/site';
+import { content, loginUrl, pathFor, type Locale, type Page } from '@/content/site';
 
 export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
   const t = content[locale].nav;
@@ -15,7 +15,6 @@ export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
         <Box component="nav" aria-label={locale === 'en' ? 'Main navigation' : 'Navegación principal'} className="main-nav">
           <Link href={pathFor(locale, 'about')}>{t.about}</Link>
           <Link href={pathFor('en', 'features')}>{t.features}</Link>
-          <a href={resourcesUrl}>{t.resources}</a>
           <Link href={whyHref}>{t.why}</Link>
           <a href={loginUrl}>{t.login}</a>
         </Box>
@@ -26,7 +25,6 @@ export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
             <nav aria-label={locale === 'en' ? 'Mobile navigation' : 'Navegación móvil'}>
               <Link href={pathFor(locale, 'about')}>{t.about}</Link>
               <Link href={pathFor('en', 'features')}>{t.features}</Link>
-              <a href={resourcesUrl}>{t.resources}</a>
               <Link href={whyHref}>{t.why}</Link>
               <a href={loginUrl}>{t.login}</a>
             </nav>
