@@ -7,7 +7,7 @@
     },
     {
       "source": "/app/:path*",
-      "destination": "https://app.doitforjesus.com/login/prayer",
+      "destination": "https://app.doitforjesus.com/prayer",
       "permanent": false
     },
     {
