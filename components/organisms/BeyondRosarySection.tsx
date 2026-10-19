@@ -17,6 +17,7 @@ const featureScreens = {
 
 export function BeyondRosarySection({ locale }: { locale: Locale }) {
   const t = content[locale].home.beyondRosary;
+  const localizedHref = (href: string) => locale === 'es' ? `/es${href}` : href;
 
   return (
     <section className="beyond-rosary-section" aria-labelledby="beyond-rosary-title">
@@ -44,9 +45,9 @@ export function BeyondRosarySection({ locale }: { locale: Locale }) {
                 </div>
                 <div className="beyond-rosary-card-copy">
                   <span className="beyond-rosary-icon"><FeatureIcon name={feature.icon} /></span>
-                  <Typography component="h3" variant="h3"><Link href={feature.href}>{feature.title}</Link></Typography>
+                  <Typography component="h3" variant="h3"><Link href={localizedHref(feature.href)}>{feature.title}</Link></Typography>
                   <Typography>{feature.body}</Typography>
-                  <Link href={feature.href} className="beyond-rosary-card-link">{locale === 'en' ? 'Learn more' : 'Conoce más'} <span aria-hidden="true">→</span></Link>
+                  <Link href={localizedHref(feature.href)} className="beyond-rosary-card-link">{locale === 'en' ? 'Learn more' : 'Conoce más'} <span aria-hidden="true">→</span></Link>
                 </div>
               </article>
             );
@@ -54,7 +55,7 @@ export function BeyondRosarySection({ locale }: { locale: Locale }) {
         </div>
 
         <div className="beyond-rosary-action">
-          <Button href={pathFor('en', 'features')} variant="outlined" color="primary" size="large">
+          <Button href={pathFor(locale, 'features')} variant="outlined" color="primary" size="large">
             {t.link} <span aria-hidden="true">→</span>
           </Button>
         </div>

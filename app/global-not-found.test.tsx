@@ -2,17 +2,32 @@ import { render, screen } from '@testing-library/react';
 import GlobalNotFound from './global-not-found';
 
 jest.mock('@/theme/font', () => ({ siteFont: { variable: 'mock-font' } }));
+const mockUsePathname = jest.fn(() => '/');
+jest.mock('next/navigation', () => ({ usePathname: () => mockUsePathname() }));
 
 describe('GlobalNotFound', () => {
-  it('offers recovery actions and an accessible illustration', () => {
+  beforeEach(() => mockUsePathname.mockReturnValue('/'));
+
+  it('offers recovery actions and accessible lost-sheep artwork', () => {
     render(<GlobalNotFound />);
 
-    expect(screen.getByRole('heading', { level: 1, name: 'This URL has gone astray.' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Take me home' })).toHaveAttribute('href', '/');
-    expect(screen.getByRole('link', { name: 'Open the prayer app' })).toHaveAttribute(
-      'href',
-      'https://app.doitforjesus.com/',
+    expect(screen.getByRole('heading', { level: 1, name: 'This page has wandered off.' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Return home' })).toHaveAttribute('href', '/');
+    expect(screen.getByRole('button', { name: 'Retrace my steps' })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /A lost sheep holding a map/ })).toHaveAttribute(
+      'src',
+      expect.stringContaining('lost-sheep-404.png'),
     );
-    expect(screen.getByRole('img', { name: /A sheep that wandered away/ })).toBeInTheDocument();
+  });
+
+  it('renders Spanish recovery copy and matching language links for Spanish URLs', () => {
+    mockUsePathname.mockReturnValue('/es/ruta-perdida');
+    render(<GlobalNotFound />);
+
+    expect(screen.getByRole('heading', { level: 1, name: 'Esta página se apartó del camino.' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Volver al inicio' })).toHaveAttribute('href', '/es');
+    expect(screen.getByRole('button', { name: 'Regresar' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'EN' })).toHaveAttribute('href', '/ruta-perdida');
+    expect(screen.getByRole('link', { name: 'ES' })).toHaveAttribute('href', '/es/ruta-perdida');
   });
 });

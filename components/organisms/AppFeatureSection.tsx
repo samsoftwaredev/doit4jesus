@@ -11,7 +11,7 @@ export function AppFeatureSection({ locale }: { locale: Locale }) {
       <Container maxWidth="lg">
         <Typography id="features-title" component="h2" variant="h2">{t.featuresTitle}</Typography>
         <Box className="feature-grid">
-          {t.features.map((feature) => <FeatureCard key={feature.title} {...feature} />)}
+          {t.features.map((feature) => <FeatureCard key={feature.title} {...feature} href={locale === 'es' ? `/es${feature.href}` : feature.href} />)}
         </Box>
       </Container>
     </section>

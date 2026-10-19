@@ -1,5 +1,16 @@
 export type Locale = "en" | "es";
-export type Page = "home" | "features" | "about" | "terms" | "privacy";
+export type CorePage =
+  | "home"
+  | "features"
+  | "about"
+  | "terms"
+  | "privacy";
+export type Page =
+  | CorePage
+  | "catholic-prayer-app"
+  | "gamified-rosary-app"
+  | "rosary-tracker-app"
+  | "examination-of-conscience-app";
 
 export const siteUrl = "https://www.doitforjesus.com";
 export const appUrl = "https://app.doitforjesus.com";
@@ -13,6 +24,10 @@ export const pathFor = (locale: Locale, page: Page): string => {
     about: "/about",
     terms: "/terms-of-service",
     privacy: "/privacy-policy",
+    "catholic-prayer-app": "/catholic-prayer-app",
+    "gamified-rosary-app": "/gamified-rosary-app",
+    "rosary-tracker-app": "/rosary-tracker-app",
+    "examination-of-conscience-app": "/examination-of-conscience-app",
   }[page];
   return `${locale === "es" ? "/es" : ""}${path}` || "/";
 };

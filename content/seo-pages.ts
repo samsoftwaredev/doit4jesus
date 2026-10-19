@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { siteUrl } from './site';
+import { pathFor, siteUrl, type Locale } from './site';
+import { seoPagesEs } from './seo-pages.es';
 
 export type SeoPageSlug = 'catholic-prayer-app' | 'gamified-rosary-app' | 'rosary-tracker-app' | 'examination-of-conscience-app';
 
-type SeoPage = {
+export type SeoPage = {
   slug: SeoPageSlug;
   title: string;
   metaTitle: string;
@@ -166,22 +167,29 @@ export const seoPages: Record<SeoPageSlug, SeoPage> = {
   },
 };
 
-export const seoPagePath = (slug: SeoPageSlug) => `/${slug}`;
+export const seoPagePath = (slug: SeoPageSlug, locale: Locale = 'en') => pathFor(locale, slug);
 
-export function seoPageMetadata(slug: SeoPageSlug): Metadata {
-  const page = seoPages[slug];
-  const url = `${siteUrl}${seoPagePath(slug)}`;
+export function seoPageMetadata(slug: SeoPageSlug, locale: Locale = 'en'): Metadata {
+  const page = locale === 'es' ? seoPagesEs[slug] : seoPages[slug];
+  const url = `${siteUrl}${seoPagePath(slug, locale)}`;
 
   return {
     metadataBase: new URL(siteUrl),
     title: page.metaTitle,
     description: page.description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        'en-US': `${siteUrl}${seoPagePath(slug, 'en')}`,
+        'es-ES': `${siteUrl}${seoPagePath(slug, 'es')}`,
+        'x-default': `${siteUrl}${seoPagePath(slug, 'en')}`,
+      },
+    },
     robots: { index: true, follow: true },
     openGraph: {
       type: 'website',
       siteName: 'DoIt4Jesus',
-      locale: 'en_US',
+      locale: locale === 'en' ? 'en_US' : 'es_ES',
       url,
       title: page.metaTitle,
       description: page.description,

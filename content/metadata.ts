@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { pathFor, siteUrl, type Locale, type Page } from './site';
+import { pathFor, siteUrl, type CorePage, type Locale } from './site';
 
 const copy = {
   en: {
@@ -18,21 +18,20 @@ const copy = {
   },
 } as const;
 
-export function pageMetadata(locale: Locale, page: Page): Metadata {
+export function pageMetadata(locale: Locale, page: CorePage): Metadata {
   const { title, description } = copy[locale][page];
   const url = `${siteUrl}${pathFor(locale, page)}`;
   const isDraft = locale === 'es' && (page === 'terms' || page === 'privacy');
-  const isFeatures = page === 'features';
   return {
     metadataBase: new URL(siteUrl),
     title,
     description,
     alternates: {
       canonical: url,
-      ...(page === 'home' || page === 'about' ? { languages: { 'en-US': `${siteUrl}${pathFor('en', page)}`, 'es-ES': `${siteUrl}${pathFor('es', page)}`, 'x-default': `${siteUrl}${pathFor('en', page)}` } } : {}),
+      languages: { 'en-US': `${siteUrl}${pathFor('en', page)}`, 'es-ES': `${siteUrl}${pathFor('es', page)}`, 'x-default': `${siteUrl}${pathFor('en', page)}` },
     },
     robots: isDraft ? { index: false, follow: false } : { index: true, follow: true },
-    openGraph: { type: 'website', siteName: 'DoIt4Jesus', locale: locale === 'en' ? 'en_US' : 'es_ES', url, title: isFeatures ? 'DoIt4Jesus Features | Grow in Faith Every Day' : title, description: isFeatures ? 'Pray the Rosary, read daily Mass Scripture, track progress, and grow with a Catholic community.' : description, images: [{ url: `${siteUrl}/og-image.jpg`, width: 512, height: 512, alt: 'DoIt4Jesus' }] },
+    openGraph: { type: 'website', siteName: 'DoIt4Jesus', locale: locale === 'en' ? 'en_US' : 'es_ES', url, title, description, images: [{ url: `${siteUrl}/og-image.jpg`, width: 512, height: 512, alt: 'DoIt4Jesus' }] },
     twitter: { card: 'summary_large_image', title, description, images: [`${siteUrl}/og-image.jpg`] },
   };
 }

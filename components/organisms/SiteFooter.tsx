@@ -11,12 +11,20 @@ const socialLinks = [
   { label: 'YouTube', href: 'https://www.youtube.com/@DoIt4Jesus', icon: <><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" strokeWidth="1.8"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></> },
 ] as const;
 
-const seoLinks = [
-  { label: 'Catholic Prayer App', href: '/catholic-prayer-app' },
-  { label: 'Gamified Rosary App', href: '/gamified-rosary-app' },
-  { label: 'Rosary Tracker', href: '/rosary-tracker-app' },
-  { label: 'Examination of Conscience', href: '/examination-of-conscience-app' },
-] as const;
+const seoLinks = {
+  en: [
+    { label: 'Catholic Prayer App', page: 'catholic-prayer-app' },
+    { label: 'Gamified Rosary App', page: 'gamified-rosary-app' },
+    { label: 'Rosary Tracker', page: 'rosary-tracker-app' },
+    { label: 'Examination of Conscience', page: 'examination-of-conscience-app' },
+  ],
+  es: [
+    { label: 'Aplicación de oración católica', page: 'catholic-prayer-app' },
+    { label: 'Rosario con motivación', page: 'gamified-rosary-app' },
+    { label: 'Seguimiento del Rosario', page: 'rosary-tracker-app' },
+    { label: 'Examen de conciencia', page: 'examination-of-conscience-app' },
+  ],
+} as const;
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   const t = content[locale];
@@ -32,16 +40,16 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         </Box>
         <Box component="nav" aria-label={locale === 'en' ? 'Footer navigation' : 'Navegación del pie de página'} className="footer-links">
           <Link href={pathFor(locale, 'about')}>{t.nav.about}</Link>
-          <Link href={pathFor('en', 'features')}>{t.nav.features}</Link>
+          <Link href={pathFor(locale, 'features')}>{t.nav.features}</Link>
           <a href="mailto:admin@doit4jesus.com">{t.footer.contact}</a>
           <Link href={pathFor(locale, 'terms')}>{t.footer.terms}</Link>
           <Link href={pathFor(locale, 'privacy')}>{t.footer.privacy}</Link>
           <a href={loginUrl}>{t.nav.login}</a>
         </Box>
-        {locale === 'en' && <Box component="nav" aria-label="Explore DoIt4Jesus guides" className="footer-seo-links">
-          <span>Explore the app</span>
-          {seoLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
-        </Box>}
+        <Box component="nav" aria-label={locale === 'en' ? 'Explore DoIt4Jesus guides' : 'Explora las guías de DoIt4Jesus'} className="footer-seo-links">
+          <span>{locale === 'en' ? 'Explore the app' : 'Explora la aplicación'}</span>
+          {seoLinks[locale].map((item) => <Link href={pathFor(locale, item.page)} key={item.page}>{item.label}</Link>)}
+        </Box>
       </Container>
     </Box>
   );

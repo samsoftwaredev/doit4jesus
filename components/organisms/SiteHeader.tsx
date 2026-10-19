@@ -14,7 +14,7 @@ export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
         <Brand href={pathFor(locale, 'home')} inverse label={locale === 'en' ? 'DoIt4Jesus home' : 'Inicio de DoIt4Jesus'} />
         <Box component="nav" aria-label={locale === 'en' ? 'Main navigation' : 'Navegación principal'} className="main-nav">
           <Link href={pathFor(locale, 'about')}>{t.about}</Link>
-          <Link href={pathFor('en', 'features')}>{t.features}</Link>
+          <Link href={pathFor(locale, 'features')}>{t.features}</Link>
           <Link href={whyHref}>{t.why}</Link>
           <a href={loginUrl}>{t.login}</a>
         </Box>
@@ -24,7 +24,7 @@ export function SiteHeader({ locale, page }: { locale: Locale; page: Page }) {
             <summary aria-label={t.menu} title={t.menu}><span aria-hidden="true" className="hamburger-lines"><i /><i /><i /></span></summary>
             <nav aria-label={locale === 'en' ? 'Mobile navigation' : 'Navegación móvil'}>
               <Link href={pathFor(locale, 'about')}>{t.about}</Link>
-              <Link href={pathFor('en', 'features')}>{t.features}</Link>
+              <Link href={pathFor(locale, 'features')}>{t.features}</Link>
               <Link href={whyHref}>{t.why}</Link>
               <a href={loginUrl}>{t.login}</a>
             </nav>

@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PublicPageShell } from '@/components/templates/PublicPageShell';
 import { seoPagePath, seoPages, type SeoPageSlug } from '@/content/seo-pages';
-import { appUrl, signupUrl, siteUrl } from '@/content/site';
+import { seoPagesEs } from '@/content/seo-pages.es';
+import { appUrl, pathFor, signupUrl, siteUrl, type Locale } from '@/content/site';
 
 const screens = {
   home: { src: '/assets/app-home.webp', width: 614, height: 5430, focus: '59%' },
@@ -14,10 +15,31 @@ const screens = {
   rosary: { src: '/assets/app-rosary.webp', width: 614, height: 1343, focus: '20%' },
 } as const;
 
-export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
-  const page = seoPages[slug];
+const labels = {
+  en: {
+    open: 'Open DoIt4Jesus', explore: 'Explore all features', inside: 'Inside DoIt4Jesus',
+    support: 'Features That Support the Practice', rhythm: 'A practical rhythm', questions: 'Common questions',
+    before: 'What to Know Before You Begin', continue: 'Continue exploring', related: 'Related DoIt4Jesus Guides',
+    learn: 'Learn more', finalKicker: 'Do it for Jesus, every day', finalTitle: 'Begin With One Faithful Choice',
+    finalBody: 'Pray the Rosary, read today’s Scripture, reflect honestly, and take what you receive into the rest of your life.',
+    started: 'Get started', home: 'Home', language: 'en-US',
+  },
+  es: {
+    open: 'Abrir DoIt4Jesus', explore: 'Explorar todas las funciones', inside: 'Dentro de DoIt4Jesus',
+    support: 'Funciones que acompañan la práctica', rhythm: 'Un ritmo práctico', questions: 'Preguntas frecuentes',
+    before: 'Lo que debes saber antes de comenzar', continue: 'Sigue explorando', related: 'Guías relacionadas de DoIt4Jesus',
+    learn: 'Conoce más', finalKicker: 'Hazlo por Jesús, cada día', finalTitle: 'Comienza con una decisión fiel',
+    finalBody: 'Reza el Rosario, lee la Escritura de hoy, reflexiona con sinceridad y lleva lo recibido al resto de tu vida.',
+    started: 'Comienza ahora', home: 'Inicio', language: 'es-ES',
+  },
+} as const;
+
+export function SearchLandingPage({ slug, locale = 'en' }: { slug: SeoPageSlug; locale?: Locale }) {
+  const pages = locale === 'es' ? seoPagesEs : seoPages;
+  const page = pages[slug];
+  const t = labels[locale];
   const screen = screens[page.screen];
-  const pageUrl = `${siteUrl}${seoPagePath(slug)}`;
+  const pageUrl = `${siteUrl}${seoPagePath(slug, locale)}`;
   const schema = [
     {
       '@context': 'https://schema.org',
@@ -25,7 +47,7 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
       name: page.title,
       description: page.description,
       url: pageUrl,
-      inLanguage: 'en-US',
+      inLanguage: t.language,
       isPartOf: { '@type': 'WebSite', name: 'DoIt4Jesus', url: siteUrl },
       about: { '@type': 'SoftwareApplication', name: 'DoIt4Jesus', applicationCategory: 'LifestyleApplication', url: siteUrl },
     },
@@ -33,7 +55,7 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+        { '@type': 'ListItem', position: 1, name: t.home, item: `${siteUrl}${pathFor(locale, 'home')}` },
         { '@type': 'ListItem', position: 2, name: page.title, item: pageUrl },
       ],
     },
@@ -49,7 +71,7 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
   ];
 
   return (
-    <PublicPageShell locale="en" page="features">
+    <PublicPageShell locale={locale} page={slug}>
       {schema.map((data, index) => <JsonLd data={data} key={index} />)}
 
       <section className="search-landing-hero" aria-labelledby="search-landing-title">
@@ -59,8 +81,8 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
             <Typography component="h1" variant="h1" id="search-landing-title">{page.title}</Typography>
             <Typography component="p">{page.lead}</Typography>
             <div className="search-landing-actions">
-              <Button href={appUrl} variant="contained" color="primary" size="large">Open DoIt4Jesus</Button>
-              <Button href="/features" variant="outlined" color="primary" size="large">Explore all features</Button>
+              <Button href={appUrl} variant="contained" color="primary" size="large">{t.open}</Button>
+              <Button href={pathFor(locale, 'features')} variant="outlined" color="primary" size="large">{t.explore}</Button>
             </div>
           </div>
           <div className="search-landing-screen" style={{ '--screen-focus': screen.focus } as React.CSSProperties}>
@@ -79,8 +101,8 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
       <section className="search-landing-highlights" aria-labelledby="search-highlights-title">
         <Container maxWidth="lg">
           <header className="search-landing-section-heading">
-            <span className="features-kicker">Inside DoIt4Jesus</span>
-            <Typography component="h2" variant="h2" id="search-highlights-title">Features That Support the Practice</Typography>
+            <span className="features-kicker">{t.inside}</span>
+            <Typography component="h2" variant="h2" id="search-highlights-title">{t.support}</Typography>
           </header>
           <div className="search-landing-highlight-grid">
             {page.highlights.map((highlight, index) => (
@@ -97,7 +119,7 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
       <section className="search-landing-steps" aria-labelledby="search-steps-title">
         <Container maxWidth="lg">
           <header className="search-landing-section-heading">
-            <span className="features-kicker">A practical rhythm</span>
+            <span className="features-kicker">{t.rhythm}</span>
             <Typography component="h2" variant="h2" id="search-steps-title">{page.stepsTitle}</Typography>
           </header>
           <div className="search-landing-step-grid">
@@ -121,8 +143,8 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
       <section className="search-landing-faq" aria-labelledby="search-faq-title">
         <Container maxWidth="md">
           <header className="search-landing-section-heading">
-            <span className="features-kicker">Common questions</span>
-            <Typography component="h2" variant="h2" id="search-faq-title">What to Know Before You Begin</Typography>
+            <span className="features-kicker">{t.questions}</span>
+            <Typography component="h2" variant="h2" id="search-faq-title">{t.before}</Typography>
           </header>
           <div className="search-landing-faq-list">
             {page.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span aria-hidden="true">+</span></summary><Typography component="p">{faq.answer}</Typography></details>)}
@@ -133,13 +155,13 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
       <section className="search-landing-related" aria-labelledby="search-related-title">
         <Container maxWidth="lg">
           <header className="search-landing-section-heading">
-            <span className="features-kicker">Continue exploring</span>
-            <Typography component="h2" variant="h2" id="search-related-title">Related DoIt4Jesus Guides</Typography>
+            <span className="features-kicker">{t.continue}</span>
+            <Typography component="h2" variant="h2" id="search-related-title">{t.related}</Typography>
           </header>
           <div className="search-landing-related-grid">
             {page.related.map((relatedSlug) => {
-              const related = seoPages[relatedSlug];
-              return <Link href={seoPagePath(relatedSlug)} key={relatedSlug}><span>{related.kicker}</span><strong>{related.title}</strong><small>Learn more <span aria-hidden="true">→</span></small></Link>;
+              const related = pages[relatedSlug];
+              return <Link href={seoPagePath(relatedSlug, locale)} key={relatedSlug}><span>{related.kicker}</span><strong>{related.title}</strong><small>{t.learn} <span aria-hidden="true">→</span></small></Link>;
             })}
           </div>
         </Container>
@@ -147,10 +169,10 @@ export function SearchLandingPage({ slug }: { slug: SeoPageSlug }) {
 
       <section className="search-landing-cta" aria-labelledby="search-cta-title">
         <Container maxWidth="md">
-          <span className="features-kicker">Do it for Jesus, every day</span>
-          <Typography component="h2" variant="h2" id="search-cta-title">Begin With One Faithful Choice</Typography>
-          <Typography component="p">Pray the Rosary, read today’s Scripture, reflect honestly, and take what you receive into the rest of your life.</Typography>
-          <Button href={signupUrl} variant="contained" color="primary" size="large">Get started</Button>
+          <span className="features-kicker">{t.finalKicker}</span>
+          <Typography component="h2" variant="h2" id="search-cta-title">{t.finalTitle}</Typography>
+          <Typography component="p">{t.finalBody}</Typography>
+          <Button href={signupUrl} variant="contained" color="primary" size="large">{t.started}</Button>
         </Container>
       </section>
     </PublicPageShell>
