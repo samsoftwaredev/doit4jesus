@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import { AnalyticsPreferencesButton } from '../analytics/AnalyticsProvider';
 import { Brand } from '../atoms/Brand';
 import { content, loginUrl, pathFor, type Locale } from '@/content/site';
 
@@ -36,19 +37,20 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         </Box>
         <Typography className="footer-copyright">© {new Date().getFullYear()} DoIt4Jesus. {t.footer.rights}</Typography>
         <Box component="nav" aria-label={locale === 'en' ? 'Social media' : 'Redes sociales'} className="social-links">
-          {socialLinks.map((item) => <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label} title={item.label}><svg viewBox="0 0 24 24" aria-hidden="true">{item.icon}</svg></a>)}
+          {socialLinks.map((item) => <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label} title={item.label} data-analytics-event="social_click" data-analytics-id={`footer_social_${item.label.toLowerCase()}`} data-analytics-placement="footer_social" data-analytics-target={item.label.toLowerCase()}><svg viewBox="0 0 24 24" aria-hidden="true">{item.icon}</svg></a>)}
         </Box>
         <Box component="nav" aria-label={locale === 'en' ? 'Footer navigation' : 'Navegación del pie de página'} className="footer-links">
-          <Link href={pathFor(locale, 'about')}>{t.nav.about}</Link>
-          <Link href={pathFor(locale, 'features')}>{t.nav.features}</Link>
-          <a href="mailto:admin@doit4jesus.com">{t.footer.contact}</a>
-          <Link href={pathFor(locale, 'terms')}>{t.footer.terms}</Link>
-          <Link href={pathFor(locale, 'privacy')}>{t.footer.privacy}</Link>
-          <a href={loginUrl}>{t.nav.login}</a>
+          <Link href={pathFor(locale, 'about')} data-analytics-event="navigation_click" data-analytics-id="footer_about" data-analytics-placement="footer" data-analytics-target="about">{t.nav.about}</Link>
+          <Link href={pathFor(locale, 'features')} data-analytics-event="navigation_click" data-analytics-id="footer_features" data-analytics-placement="footer" data-analytics-target="features">{t.nav.features}</Link>
+          <a href="mailto:admin@doit4jesus.com" data-analytics-event="contact_click" data-analytics-id="footer_contact" data-analytics-placement="footer" data-analytics-target="support_email">{t.footer.contact}</a>
+          <Link href={pathFor(locale, 'terms')} data-analytics-event="navigation_click" data-analytics-id="footer_terms" data-analytics-placement="footer" data-analytics-target="terms">{t.footer.terms}</Link>
+          <Link href={pathFor(locale, 'privacy')} data-analytics-event="navigation_click" data-analytics-id="footer_privacy" data-analytics-placement="footer" data-analytics-target="privacy">{t.footer.privacy}</Link>
+          <AnalyticsPreferencesButton />
+          <a href={loginUrl} data-analytics-event="login_handoff" data-analytics-id="footer_login" data-analytics-placement="footer" data-analytics-target="login">{t.nav.login}</a>
         </Box>
         <Box component="nav" aria-label={locale === 'en' ? 'Explore DoIt4Jesus guides' : 'Explora las guías de DoIt4Jesus'} className="footer-seo-links">
           <span>{locale === 'en' ? 'Explore the app' : 'Explora la aplicación'}</span>
-          {seoLinks[locale].map((item) => <Link href={pathFor(locale, item.page)} key={item.page}>{item.label}</Link>)}
+          {seoLinks[locale].map((item) => <Link href={pathFor(locale, item.page)} key={item.page} data-analytics-event="related_content_click" data-analytics-id={`footer_guide_${item.page}`} data-analytics-placement="footer_guides" data-analytics-target={item.page}>{item.label}</Link>)}
         </Box>
       </Container>
     </Box>

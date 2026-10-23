@@ -2,6 +2,9 @@ import type { ReactElement, ReactNode } from 'react';
 import SpanishLayout from './layout';
 
 jest.mock('@/theme/font', () => ({ siteFont: { variable: 'mock-font' } }));
+jest.mock('@/components/analytics/AnalyticsProvider', () => ({
+  AnalyticsProvider: ({ children }: { children: ReactNode }) => children,
+}));
 jest.mock('@/theme/ThemeRegistry', () => ({
   ThemeRegistry: ({ children }: { children: ReactNode }) => children,
 }));
@@ -11,11 +14,11 @@ describe('SpanishLayout', () => {
     const layout = SpanishLayout({ children: <p>Contenido</p> }) as ReactElement<{
       lang: string;
       className: string;
-      children: ReactElement<{ children: ReactElement<{ children: ReactNode }> }>;
+      children: ReactElement<{ children: ReactElement<{ children: ReactElement<{ children: ReactNode }> }> }>;
     }>;
 
     expect(layout.props.lang).toBe('es');
     expect(layout.props.className).toBe('mock-font');
-    expect(layout.props.children.props.children.props.children).toEqual(<p>Contenido</p>);
+    expect(layout.props.children.props.children.props.children.props.children).toEqual(<p>Contenido</p>);
   });
 });

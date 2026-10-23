@@ -21,7 +21,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
           <Box component="ul" className="values-list">{t.values.map((value) => <li key={value}>{value}</li>)}</Box>
           <Typography component="h2" variant="h3">{t.forTitle}</Typography>
           <Typography>{t.forBody}</Typography>
-          <Button href={appUrl} variant="contained" color="primary">{t.cta}</Button>
+          <Button href={appUrl} variant="contained" color="primary" data-analytics-event="app_open_handoff" data-analytics-id="about_join_prayer" data-analytics-placement="about_content" data-analytics-target="app_home">{t.cta}</Button>
         </Box>
       </Container>
     </PublicPageShell>

@@ -10,6 +10,7 @@ describe('HeroSection', () => {
       screen.getByRole('heading', { level: 1, name: 'Do It for Jesus, Every Day' }),
     ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Get Started' })).toHaveAttribute('href', signupUrl);
+    expect(screen.getByRole('link', { name: 'Get Started' })).toHaveAttribute('data-analytics-id', 'home_hero_signup');
     expect(
       screen.getByRole('img', { name: 'Hand holding a phone with the DoIt4Jesus Rosary app' }),
     ).toBeInTheDocument();

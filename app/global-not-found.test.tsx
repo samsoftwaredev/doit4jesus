@@ -13,6 +13,7 @@ describe('GlobalNotFound', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: 'This page has wandered off.' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Return home' })).toHaveAttribute('href', '/');
+    expect(screen.getByRole('link', { name: 'Return home' })).toHaveAttribute('data-analytics-event', 'not_found_recovery');
     expect(screen.getByRole('button', { name: 'Retrace my steps' })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /A lost sheep holding a map/ })).toHaveAttribute(
       'src',

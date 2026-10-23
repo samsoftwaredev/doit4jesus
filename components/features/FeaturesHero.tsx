@@ -19,8 +19,8 @@ export function FeaturesHero({ locale = 'en' }: { locale?: Locale }) {
         <Typography component="h1" variant="h1" id="features-title">{t.title}</Typography>
         <Typography className="features-hero-lead">{t.lead}</Typography>
         <div className="features-hero-actions">
-          <Button href={signupUrl} variant="contained" color="primary" size="large">{t.started}</Button>
-          <Button href="#feature-navigation" variant="outlined" size="large" className="features-outline-button">{t.explore}</Button>
+          <Button href={signupUrl} variant="contained" color="primary" size="large" data-analytics-event="signup_handoff" data-analytics-id="features_hero_signup" data-analytics-placement="features_hero" data-analytics-target="signup">{t.started}</Button>
+          <Button href="#feature-navigation" variant="outlined" size="large" className="features-outline-button" data-analytics-event="navigation_click" data-analytics-id="features_hero_explore" data-analytics-placement="features_hero" data-analytics-target="feature_navigation">{t.explore}</Button>
         </div>
         <p className="features-hero-note">{t.note}</p>
       </div>

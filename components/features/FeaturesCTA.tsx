@@ -16,7 +16,7 @@ export function FeaturesCTA({ final = false, locale = 'en' }: { final?: boolean;
       <span className="features-kicker">{final ? t.finalKicker : t.midKicker}</span>
       <Typography component="h2" variant="h2" id={final ? 'features-final-title' : 'features-mid-title'}>{final ? t.finalTitle : t.midTitle}</Typography>
       <p>{final ? t.finalBody : t.midBody}</p>
-      <div className="features-cta-actions"><Button href={final ? signupUrl : appUrl} variant="contained" color="primary" size="large">{final ? t.started : t.journey}</Button>{final && <Button href={pathFor(locale, 'about')} variant="outlined" size="large">{t.about}</Button>}</div>
+      <div className="features-cta-actions"><Button href={final ? signupUrl : appUrl} variant="contained" color="primary" size="large" data-analytics-event={final ? 'signup_handoff' : 'app_open_handoff'} data-analytics-id={final ? 'features_final_signup' : 'features_mid_app_open'} data-analytics-placement={final ? 'features_final_cta' : 'features_mid_cta'} data-analytics-target={final ? 'signup' : 'app_home'}>{final ? t.started : t.journey}</Button>{final && <Button href={pathFor(locale, 'about')} variant="outlined" size="large" data-analytics-event="navigation_click" data-analytics-id="features_final_about" data-analytics-placement="features_final_cta" data-analytics-target="about">{t.about}</Button>}</div>
     </Container>
   </section>;
 }

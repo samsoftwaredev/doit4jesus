@@ -8,7 +8,7 @@ describe('PowerfulWeaponSection', () => {
     expect(screen.getByRole('heading', { level: 2, name: 'A Powerful Weapon' })).toBeInTheDocument();
     expect(screen.getByTitle('A video about the power of the Rosary')).toHaveAttribute(
       'src',
-      'https://www.youtube-nocookie.com/embed/x1tH_zQ-Cz0',
+      'https://www.youtube-nocookie.com/embed/x1tH_zQ-Cz0?enablejsapi=1',
     );
   });
 });

@@ -11,8 +11,8 @@ export function LanguageSelector({ locale, page }: { locale: Locale; page: Page 
         <span className="chevron" aria-hidden="true">⌄</span>
       </summary>
       <div className="language-options">
-        <Link href={pathFor('en', page)} hrefLang="en" lang="en"><span aria-hidden="true">🇺🇸</span> English</Link>
-        <Link href={pathFor('es', page)} hrefLang="es" lang="es"><span aria-hidden="true">🇪🇸</span> Español</Link>
+        <Link href={pathFor('en', page)} hrefLang="en" lang="en" data-analytics-event="language_switch" data-analytics-id="language_english" data-analytics-placement="header_language" data-analytics-target="en"><span aria-hidden="true">🇺🇸</span> English</Link>
+        <Link href={pathFor('es', page)} hrefLang="es" lang="es" data-analytics-event="language_switch" data-analytics-id="language_spanish" data-analytics-placement="header_language" data-analytics-target="es"><span aria-hidden="true">🇪🇸</span> Español</Link>
       </div>
     </details>
   );

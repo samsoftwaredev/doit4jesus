@@ -9,7 +9,7 @@ export function FeatureNavigation({ locale = 'en' }: { locale?: Locale }) {
     <Container maxWidth="lg" className="feature-navigation-inner">
       <span>{locale === 'en' ? 'Explore the app' : 'Explora la aplicación'}</span>
       <div className="feature-navigation-scroll">
-        {categories.map((category) => <a key={category.id} href={`#${category.id}`}>{category.label}</a>)}
+        {categories.map((category) => <a key={category.id} href={`#${category.id}`} data-analytics-event="navigation_click" data-analytics-id={`feature_nav_${category.id}`} data-analytics-placement="feature_navigation" data-analytics-target={category.id}>{category.label}</a>)}
       </div>
     </Container>
   </nav>;

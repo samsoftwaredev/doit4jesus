@@ -43,13 +43,13 @@ export function NotFoundPageContent() {
   return (
     <>
       <header className="not-found-header">
-        <Link href={homeHref} replace className="brand" aria-label={t.brandLabel}>
+        <Link href={homeHref} replace className="brand" aria-label={t.brandLabel} data-analytics-event="not_found_recovery" data-analytics-id="not_found_brand_home" data-analytics-placement="not_found_header" data-analytics-target="home">
           <Image className="brand-logo" src="/assets/logo-white.svg" alt="" width={132} height={70} priority />
         </Link>
         <div className="not-found-header-tools">
           <nav aria-label={locale === "en" ? "Select language" : "Seleccionar idioma"} className="not-found-languages">
-            <Link href={pathWithoutLocale} hrefLang="en" lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</Link>
-            <Link href={spanishHref} hrefLang="es" lang="es" aria-current={locale === "es" ? "page" : undefined}>ES</Link>
+            <Link href={pathWithoutLocale} hrefLang="en" lang="en" aria-current={locale === "en" ? "page" : undefined} data-analytics-event="language_switch" data-analytics-id="not_found_language_english" data-analytics-placement="not_found_header" data-analytics-target="en">EN</Link>
+            <Link href={spanishHref} hrefLang="es" lang="es" aria-current={locale === "es" ? "page" : undefined} data-analytics-event="language_switch" data-analytics-id="not_found_language_spanish" data-analytics-placement="not_found_header" data-analytics-target="es">ES</Link>
           </nav>
           <span>{t.status}</span>
         </div>

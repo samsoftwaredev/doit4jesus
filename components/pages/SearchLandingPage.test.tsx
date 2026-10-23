@@ -11,7 +11,9 @@ describe('SearchLandingPage', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: page.title })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Open DoIt4Jesus' })).toHaveAttribute('href', appUrl);
+    expect(screen.getByRole('link', { name: 'Open DoIt4Jesus' })).toHaveAttribute('data-analytics-event', 'app_open_handoff');
     expect(screen.getByRole('link', { name: 'Get started' })).toHaveAttribute('href', signupUrl);
+    expect(screen.getByRole('link', { name: 'Get started' })).toHaveAttribute('data-analytics-id', 'rosary-tracker-app_final_signup');
     expect(container.querySelectorAll('script[type="application/ld+json"]')).toHaveLength(3);
   });
 
@@ -23,6 +25,7 @@ describe('SearchLandingPage', () => {
     expect(screen.getByRole('link', { name: 'Explorar todas las funciones' })).toHaveAttribute('href', '/es/features');
     expect(screen.getByRole('link', { name: /Español/ })).toHaveAttribute('href', '/es/rosary-tracker-app');
     expect(screen.getByRole('link', { name: 'Comienza ahora' })).toHaveAttribute('href', signupUrl);
+    expect(screen.getByRole('link', { name: 'Comienza ahora' })).toHaveAttribute('data-analytics-event', 'signup_handoff');
     const webPageSchema = JSON.parse(container.querySelector('script[type="application/ld+json"]')!.textContent!);
     expect(webPageSchema).toMatchObject({ inLanguage: 'es-ES', url: expect.stringContaining('/es/rosary-tracker-app') });
   });

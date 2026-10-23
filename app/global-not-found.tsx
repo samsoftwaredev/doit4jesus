@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
 import { NotFoundPageContent } from "@/components/pages/NotFoundPageContent";
 import { siteFont } from "@/theme/font";
 
@@ -15,9 +16,11 @@ export default function GlobalNotFound() {
   return (
     <html lang="en" className={siteFont.variable}>
       <body className="not-found-body">
-        <div className="not-found-atmosphere" aria-hidden="true" />
-        <NotFoundPageContent />
-        <div className="not-found-foreground-dust" aria-hidden="true" />
+        <AnalyticsProvider>
+          <div className="not-found-atmosphere" aria-hidden="true" />
+          <NotFoundPageContent />
+          <div className="not-found-foreground-dust" aria-hidden="true" />
+        </AnalyticsProvider>
       </body>
     </html>
   );

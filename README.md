@@ -11,6 +11,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000). To check the production export, run `npm run build`; the static site is written to `out/`.
 
+Google Analytics is consent-gated and disabled unless `NEXT_PUBLIC_GA_MEASUREMENT_ID` contains a valid GA4 measurement ID. Configure it only in the production deployment. See [Analytics and SEO measurement](docs/analytics.md) for the GA4, Search Console, privacy, event, UTM, and verification setup.
+
 ## Structure
 
 - `app/` contains the public routes plus robots and sitemap metadata routes.

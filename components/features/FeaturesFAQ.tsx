@@ -9,7 +9,7 @@ export function FeaturesFAQ({ locale = 'en' }: { locale?: Locale }) {
   return <section className="features-faq" aria-labelledby="features-faq-title">
     <Container maxWidth="lg" className="features-faq-inner">
       <div><span className="features-kicker">{locale === 'en' ? 'Good questions' : 'Buenas preguntas'}</span><Typography component="h2" variant="h2" id="features-faq-title">{locale === 'en' ? 'Questions About DoIt4Jesus' : 'Preguntas sobre DoIt4Jesus'}</Typography><p>{locale === 'en' ? 'Clear answers about the app, Catholic practice, and what progress can—and cannot—mean.' : 'Respuestas claras sobre la aplicación, la práctica católica y lo que el progreso puede —y no puede— significar.'}</p></div>
-      <div className="features-faq-list">{faq.map(({ question, answer }) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div>
+      <div className="features-faq-list">{faq.map(({ question, answer }, index) => <details key={question}><summary data-analytics-event="faq_open" data-analytics-id={`features_faq_${index + 1}`} data-analytics-placement="features_faq" data-analytics-target={`faq_${index + 1}`}>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div>
     </Container>
   </section>;
 }

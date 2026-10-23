@@ -45,9 +45,9 @@ export function BeyondRosarySection({ locale }: { locale: Locale }) {
                 </div>
                 <div className="beyond-rosary-card-copy">
                   <span className="beyond-rosary-icon"><FeatureIcon name={feature.icon} /></span>
-                  <Typography component="h3" variant="h3"><Link href={localizedHref(feature.href)}>{feature.title}</Link></Typography>
+                  <Typography component="h3" variant="h3"><Link href={localizedHref(feature.href)} data-analytics-event="related_content_click" data-analytics-id={`beyond_${feature.screen}_title`} data-analytics-placement="home_beyond_rosary" data-analytics-target={feature.screen}>{feature.title}</Link></Typography>
                   <Typography>{feature.body}</Typography>
-                  <Link href={localizedHref(feature.href)} className="beyond-rosary-card-link">{locale === 'en' ? 'Learn more' : 'Conoce más'} <span aria-hidden="true">→</span></Link>
+                  <Link href={localizedHref(feature.href)} className="beyond-rosary-card-link" data-analytics-event="related_content_click" data-analytics-id={`beyond_${feature.screen}_link`} data-analytics-placement="home_beyond_rosary" data-analytics-target={feature.screen}>{locale === 'en' ? 'Learn more' : 'Conoce más'} <span aria-hidden="true">→</span></Link>
                 </div>
               </article>
             );
@@ -55,7 +55,7 @@ export function BeyondRosarySection({ locale }: { locale: Locale }) {
         </div>
 
         <div className="beyond-rosary-action">
-          <Button href={pathFor(locale, 'features')} variant="outlined" color="primary" size="large">
+          <Button href={pathFor(locale, 'features')} variant="outlined" color="primary" size="large" data-analytics-event="navigation_click" data-analytics-id="beyond_all_features" data-analytics-placement="home_beyond_rosary" data-analytics-target="features">
             {t.link} <span aria-hidden="true">→</span>
           </Button>
         </div>

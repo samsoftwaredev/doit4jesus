@@ -11,11 +11,13 @@ describe('FeatureCard', () => {
         alt="The guided Rosary"
         imageFocus="rosary"
         href="/features#prayer"
+        analyticsId="home_feature_1"
       />,
     );
 
     expect(screen.getByRole('heading', { level: 3, name: 'Pray the Rosary' })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: 'The guided Rosary' })).toBeInTheDocument();
     expect(screen.getAllByRole('link').every((link) => link.getAttribute('href') === '/features#prayer')).toBe(true);
+    expect(screen.getByRole('link', { name: 'See how it works' })).toHaveAttribute('data-analytics-target', 'home_feature_1');
   });
 });

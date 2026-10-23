@@ -57,7 +57,7 @@ export function AppPreviewTour({ locale = 'en' }: { locale?: Locale }) {
         </header>
         <div className="app-preview-grid">
           {localizedPreviews.map((preview) => (
-            <a className="app-preview-card" href={preview.href} key={preview.title}>
+            <a className="app-preview-card" href={preview.href} key={preview.title} data-analytics-event="navigation_click" data-analytics-id={`preview_${preview.number}`} data-analytics-placement="feature_preview" data-analytics-target={preview.screen}>
               <div className={`app-preview-visual${'secondaryScreen' in preview ? ' app-preview-visual-split' : ''}`}>
                 <div className="app-preview-crop"><AppScreen screen={preview.screen} sizes="(max-width: 900px) 90vw, 560px" /></div>
                 {'secondaryScreen' in preview && <div className="app-preview-crop"><AppScreen screen={preview.secondaryScreen} sizes="(max-width: 900px) 90vw, 560px" /></div>}

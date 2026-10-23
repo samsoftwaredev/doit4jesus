@@ -197,7 +197,7 @@ export const content = {
     },
     legal: {
       draft: "",
-      effective: "Effective date: June 8, 2024",
+      effective: "Effective date: October 22, 2026",
       contact: "Questions? Contact",
     },
   },
@@ -366,7 +366,7 @@ export const content = {
     legal: {
       draft:
         "Traducción de cortesía en borrador. La versión en inglés es la versión oficial hasta que se revise esta traducción.",
-      effective: "Fecha de vigencia: 8 de junio de 2024",
+      effective: "Fecha de vigencia: 22 de octubre de 2026",
       contact: "¿Preguntas? Escribe a",
     },
   },

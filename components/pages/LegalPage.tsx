@@ -23,10 +23,11 @@ export function LegalPage({ locale, page }: { locale: Locale; page: 'terms' | 'p
             {section.bullets && <Box component="ul">{section.bullets.map((bullet) => <li key={bullet}><Typography>{bullet}</Typography></li>)}</Box>}
             {page === 'terms' && section.heading.startsWith('6.') && <Link href={pathFor(locale, 'privacy')}>{locale === 'en' ? 'Read the Privacy Policy' : 'Lee la Política de privacidad'}</Link>}
             {page === 'privacy' && section.heading.startsWith('3.1.') && <a href="https://support.google.com/a/answer/7281227?hl=en" target="_blank" rel="noopener noreferrer">{locale === 'en' ? 'Google Account Help' : 'Ayuda de la cuenta de Google'}</a>}
+            {page === 'privacy' && section.heading.startsWith('3.7.') && <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">{locale === 'en' ? 'Google Privacy Policy' : 'Política de Privacidad de Google'}</a>}
           </Box>
         ))}
         {document.closing && <Typography className="legal-closing">{document.closing}</Typography>}
-        <Typography className="legal-contact">{t.contact} <a href="mailto:admin@doit4jesus.com">admin@doit4jesus.com</a>.</Typography>
+        <Typography className="legal-contact">{t.contact} <a href="mailto:admin@doit4jesus.com" data-analytics-event="contact_click" data-analytics-id="legal_contact" data-analytics-placement="legal_footer" data-analytics-target="support_email">admin@doit4jesus.com</a>.</Typography>
       </Container>
     </PublicPageShell>
   );

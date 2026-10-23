@@ -81,8 +81,8 @@ export function SearchLandingPage({ slug, locale = 'en' }: { slug: SeoPageSlug; 
             <Typography component="h1" variant="h1" id="search-landing-title">{page.title}</Typography>
             <Typography component="p">{page.lead}</Typography>
             <div className="search-landing-actions">
-              <Button href={appUrl} variant="contained" color="primary" size="large">{t.open}</Button>
-              <Button href={pathFor(locale, 'features')} variant="outlined" color="primary" size="large">{t.explore}</Button>
+              <Button href={appUrl} variant="contained" color="primary" size="large" data-analytics-event="app_open_handoff" data-analytics-id={`${slug}_hero_app_open`} data-analytics-placement="seo_landing_hero" data-analytics-target="app_home">{t.open}</Button>
+              <Button href={pathFor(locale, 'features')} variant="outlined" color="primary" size="large" data-analytics-event="navigation_click" data-analytics-id={`${slug}_hero_features`} data-analytics-placement="seo_landing_hero" data-analytics-target="features">{t.explore}</Button>
             </div>
           </div>
           <div className="search-landing-screen" style={{ '--screen-focus': screen.focus } as React.CSSProperties}>
@@ -147,7 +147,7 @@ export function SearchLandingPage({ slug, locale = 'en' }: { slug: SeoPageSlug; 
             <Typography component="h2" variant="h2" id="search-faq-title">{t.before}</Typography>
           </header>
           <div className="search-landing-faq-list">
-            {page.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span aria-hidden="true">+</span></summary><Typography component="p">{faq.answer}</Typography></details>)}
+            {page.faqs.map((faq, index) => <details key={faq.question}><summary data-analytics-event="faq_open" data-analytics-id={`${slug}_faq_${index + 1}`} data-analytics-placement="seo_landing_faq" data-analytics-target={`faq_${index + 1}`}>{faq.question}<span aria-hidden="true">+</span></summary><Typography component="p">{faq.answer}</Typography></details>)}
           </div>
         </Container>
       </section>
@@ -161,7 +161,7 @@ export function SearchLandingPage({ slug, locale = 'en' }: { slug: SeoPageSlug; 
           <div className="search-landing-related-grid">
             {page.related.map((relatedSlug) => {
               const related = pages[relatedSlug];
-              return <Link href={seoPagePath(relatedSlug, locale)} key={relatedSlug}><span>{related.kicker}</span><strong>{related.title}</strong><small>{t.learn} <span aria-hidden="true">→</span></small></Link>;
+              return <Link href={seoPagePath(relatedSlug, locale)} key={relatedSlug} data-analytics-event="related_content_click" data-analytics-id={`${slug}_related_${relatedSlug}`} data-analytics-placement="seo_landing_related" data-analytics-target={relatedSlug}><span>{related.kicker}</span><strong>{related.title}</strong><small>{t.learn} <span aria-hidden="true">→</span></small></Link>;
             })}
           </div>
         </Container>
@@ -172,7 +172,7 @@ export function SearchLandingPage({ slug, locale = 'en' }: { slug: SeoPageSlug; 
           <span className="features-kicker">{t.finalKicker}</span>
           <Typography component="h2" variant="h2" id="search-cta-title">{t.finalTitle}</Typography>
           <Typography component="p">{t.finalBody}</Typography>
-          <Button href={signupUrl} variant="contained" color="primary" size="large">{t.started}</Button>
+          <Button href={signupUrl} variant="contained" color="primary" size="large" data-analytics-event="signup_handoff" data-analytics-id={`${slug}_final_signup`} data-analytics-placement="seo_landing_final_cta" data-analytics-target="signup">{t.started}</Button>
         </Container>
       </section>
     </PublicPageShell>

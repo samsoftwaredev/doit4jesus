@@ -14,7 +14,7 @@ export function PowerfulWeaponSection({ locale }: { locale: Locale }) {
         </Box>
         <Box className="video-frame">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/x1tH_zQ-Cz0"
+            src="https://www.youtube-nocookie.com/embed/x1tH_zQ-Cz0?enablejsapi=1"
             title={t.videoTitle}
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

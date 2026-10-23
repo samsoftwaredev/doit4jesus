@@ -13,7 +13,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
         <Typography component="p" className="hero-brand-line">{t.brandLine}</Typography>
         <Typography id="hero-title" component="h1" variant="h1">{t.title}</Typography>
         <Typography className="hero-subtitle">{t.description}</Typography>
-        <Button href={signupUrl} variant="contained" color="primary" size="large" className="hero-cta">{t.primary}</Button>
+        <Button href={signupUrl} variant="contained" color="primary" size="large" className="hero-cta" data-analytics-event="signup_handoff" data-analytics-id="home_hero_signup" data-analytics-placement="home_hero" data-analytics-target="signup">{t.primary}</Button>
         <Box className="hero-product">
           <Image
             src="/assets/phone-hand.svg"

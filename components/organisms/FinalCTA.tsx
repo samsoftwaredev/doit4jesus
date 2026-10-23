@@ -9,7 +9,7 @@ export function FinalCTA({ locale }: { locale: Locale }) {
     <section className="final-cta" aria-labelledby="final-cta-title">
       <Container maxWidth="md">
         <Typography id="final-cta-title" component="h2" variant="h2">{t.ctaTitle}</Typography>
-        <Button href={signupUrl} variant="contained" color="primary">{t.ctaButton}</Button>
+        <Button href={signupUrl} variant="contained" color="primary" data-analytics-event="signup_handoff" data-analytics-id="home_final_signup" data-analytics-placement="home_final_cta" data-analytics-target="signup">{t.ctaButton}</Button>
       </Container>
     </section>
   );
