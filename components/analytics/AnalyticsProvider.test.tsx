@@ -27,7 +27,7 @@ describe('AnalyticsProvider', () => {
   });
 
   it('renders no analytics or consent UI without a production measurement ID', async () => {
-    render(<AnalyticsProvider><p>Page</p></AnalyticsProvider>);
+    render(<AnalyticsProvider measurementId=""><p>Page</p></AnalyticsProvider>);
 
     await waitFor(() => expect(screen.getByText('Page')).toBeInTheDocument());
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
