@@ -31,4 +31,19 @@ describe('localized metadata', () => {
     });
     expect(metadata.openGraph).toMatchObject({ locale: 'es_ES', url: `${siteUrl}/es/rosary-tracker-app` });
   });
+
+  it('indexes both official Community Guidelines versions with reciprocal alternates', () => {
+    const metadata = pageMetadata('es', 'guidelines');
+
+    expect(metadata.title).toBe('Normas de la comunidad | DoIt4Jesus');
+    expect(metadata.robots).toEqual({ index: true, follow: true });
+    expect(metadata.alternates).toEqual({
+      canonical: `${siteUrl}/es/community-guidelines`,
+      languages: {
+        'en-US': `${siteUrl}/community-guidelines`,
+        'es-ES': `${siteUrl}/es/community-guidelines`,
+        'x-default': `${siteUrl}/community-guidelines`,
+      },
+    });
+  });
 });

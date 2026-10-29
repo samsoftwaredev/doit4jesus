@@ -11,5 +11,12 @@ describe('SiteFooter', () => {
       '_blank',
     );
     expect(screen.getByRole('navigation', { name: 'Explore DoIt4Jesus guides' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Community Guidelines' })).toHaveAttribute('href', '/community-guidelines');
+  });
+
+  it('links to the Spanish official legal documents', () => {
+    render(<SiteFooter locale="es" />);
+
+    expect(screen.getByRole('link', { name: 'Normas de la comunidad' })).toHaveAttribute('href', '/es/community-guidelines');
   });
 });

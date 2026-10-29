@@ -4,7 +4,8 @@ export type CorePage =
   | "features"
   | "about"
   | "terms"
-  | "privacy";
+  | "privacy"
+  | "guidelines";
 export type Page =
   | CorePage
   | "catholic-prayer-app"
@@ -24,6 +25,7 @@ export const pathFor = (locale: Locale, page: Page): string => {
     about: "/about",
     terms: "/terms-of-service",
     privacy: "/privacy-policy",
+    guidelines: "/community-guidelines",
     "catholic-prayer-app": "/catholic-prayer-app",
     "gamified-rosary-app": "/gamified-rosary-app",
     "rosary-tracker-app": "/rosary-tracker-app",
@@ -48,6 +50,7 @@ export const content = {
       contact: "Contact Us",
       terms: "Terms of Service",
       privacy: "Privacy Policy",
+      guidelines: "Community Guidelines",
     },
     home: {
       brandLine: "The Rosary Gamified",
@@ -196,8 +199,6 @@ export const content = {
       cta: "Join us in prayer",
     },
     legal: {
-      draft: "",
-      effective: "Effective date: October 22, 2026",
       contact: "Questions? Contact",
     },
   },
@@ -216,6 +217,7 @@ export const content = {
       contact: "Contáctanos",
       terms: "Términos de servicio",
       privacy: "Política de privacidad",
+      guidelines: "Normas de la comunidad",
     },
     home: {
       brandLine: "El Rosario hecho juego",
@@ -364,9 +366,6 @@ export const content = {
       cta: "Únete a nosotros en oración",
     },
     legal: {
-      draft:
-        "Traducción de cortesía en borrador. La versión en inglés es la versión oficial hasta que se revise esta traducción.",
-      effective: "Fecha de vigencia: 22 de octubre de 2026",
       contact: "¿Preguntas? Escribe a",
     },
   },

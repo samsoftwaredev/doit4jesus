@@ -10,6 +10,7 @@ describe('sitemap', () => {
       '/about',
       '/terms-of-service',
       '/privacy-policy',
+      '/community-guidelines',
       '/catholic-prayer-app',
       '/gamified-rosary-app',
       '/rosary-tracker-app',

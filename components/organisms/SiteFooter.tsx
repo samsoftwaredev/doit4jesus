@@ -45,6 +45,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <a href="mailto:admin@doit4jesus.com" data-analytics-event="contact_click" data-analytics-id="footer_contact" data-analytics-placement="footer" data-analytics-target="support_email">{t.footer.contact}</a>
           <Link href={pathFor(locale, 'terms')} data-analytics-event="navigation_click" data-analytics-id="footer_terms" data-analytics-placement="footer" data-analytics-target="terms">{t.footer.terms}</Link>
           <Link href={pathFor(locale, 'privacy')} data-analytics-event="navigation_click" data-analytics-id="footer_privacy" data-analytics-placement="footer" data-analytics-target="privacy">{t.footer.privacy}</Link>
+          <Link href={pathFor(locale, 'guidelines')} data-analytics-event="navigation_click" data-analytics-id="footer_guidelines" data-analytics-placement="footer" data-analytics-target="guidelines">{t.footer.guidelines}</Link>
           <AnalyticsPreferencesButton />
           <a href={loginUrl} data-analytics-event="login_handoff" data-analytics-id="footer_login" data-analytics-placement="footer" data-analytics-target="login">{t.nav.login}</a>
         </Box>
