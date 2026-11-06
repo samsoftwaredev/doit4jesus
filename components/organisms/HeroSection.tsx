@@ -7,11 +7,17 @@ import { content, signupUrl, type Locale } from '@/content/site';
 
 export function HeroSection({ locale }: { locale: Locale }) {
   const t = content[locale].home;
+  const titleAccent = locale === 'en' ? 'With DoIt4Jesus' : 'con DoIt4Jesus';
+  const titleLead = t.title.slice(0, -titleAccent.length).trim();
+
   return (
     <section className="hero-section" aria-labelledby="hero-title">
       <Container maxWidth="lg" className="hero-inner">
         <Typography component="p" className="hero-brand-line">{t.brandLine}</Typography>
-        <Typography id="hero-title" component="h1" variant="h1">{t.title}</Typography>
+        <Typography id="hero-title" component="h1" variant="h1">
+          {titleLead}{' '}
+          <span className="hero-title-accent">{titleAccent}</span>
+        </Typography>
         <Typography className="hero-subtitle">{t.description}</Typography>
         <Button href={signupUrl} variant="contained" color="primary" size="large" className="hero-cta" data-analytics-event="signup_handoff" data-analytics-id="home_hero_signup" data-analytics-placement="home_hero" data-analytics-target="signup">{t.primary}</Button>
         <Box className="hero-product">

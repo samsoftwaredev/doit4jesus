@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { Breadcrumbs } from '@/components/molecules/Breadcrumbs';
 import { PublicPageShell } from '@/components/templates/PublicPageShell';
 import { seoPagePath, seoPages, type SeoPageSlug } from '@/content/seo-pages';
 import { seoPagesEs } from '@/content/seo-pages.es';
@@ -77,6 +78,7 @@ export function SearchLandingPage({ slug, locale = 'en' }: { slug: SeoPageSlug; 
       <section className="search-landing-hero" aria-labelledby="search-landing-title">
         <Container maxWidth="lg" className="search-landing-hero-inner">
           <div className="search-landing-hero-copy">
+            <Breadcrumbs label={locale === 'en' ? 'Breadcrumb' : 'Ruta de navegación'} items={[{ label: t.home, href: pathFor(locale, 'home') }, { label: page.title }]} />
             <span className="features-kicker">{page.kicker}</span>
             <Typography component="h1" variant="h1" id="search-landing-title">{page.title}</Typography>
             <Typography component="p">{page.lead}</Typography>

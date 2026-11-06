@@ -10,7 +10,7 @@ export const theme = createTheme({
     divider: '#e4e7e6',
   },
   typography: {
-    fontFamily: 'var(--font-geist-sans), Arial, Helvetica, sans-serif',
+    fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif',
     h1: { fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 400, letterSpacing: '-0.045em', lineHeight: 1.1 },
     h2: { fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 400, letterSpacing: '-0.04em', lineHeight: 1.15 },
     h3: { fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 400, letterSpacing: '-0.03em' },

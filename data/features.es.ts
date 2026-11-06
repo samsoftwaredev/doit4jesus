@@ -29,7 +29,7 @@ export const publishedFeatureCategoriesEs: FeatureCategory[] = [
     closing: 'Un examen de conciencia puede preparar tu corazón para el arrepentimiento y la Reconciliación. Una aplicación no puede absolver pecados ni sustituir a un sacerdote, la Confesión o la orientación pastoral.',
     features: [
       { title: 'Recursos católicos', icon: 'book', description: 'Explora lecturas sobre la fe para comprender una práctica con mayor profundidad o llevar un tema de la oración al resto del día.', details: ['Artículos de fe', 'Lectura fuera del flujo de oración', 'Un camino de la curiosidad a la reflexión'] },
-      { title: 'Examen de conciencia', icon: 'cross', description: 'Usa preguntas para reflexionar sobre pensamientos, palabras, acciones y hábitos. Hay guías para adultos, adolescentes y niños.', details: ['Guías según la edad', 'Preguntas para reflexión privada', 'Preparación para la Confesión'] },
+      { title: 'Examen de conciencia', icon: 'cross', description: 'Usa preguntas para adultos a fin de reflexionar sobre pensamientos, palabras, acciones y hábitos mientras te preparas para la Confesión.', details: ['Guía de reflexión para adultos', 'Preguntas para reflexión privada', 'Preparación para la Confesión'] },
     ],
   },
   {
@@ -51,12 +51,12 @@ export const publishedFeatureCategoriesEs: FeatureCategory[] = [
     ],
   },
   {
-    id: 'community', label: 'Comunidad', title: 'Ora con católicos de todo el mundo',
+    id: 'community', label: 'Comunidad', title: 'Ora con una comunidad católica',
     introduction: 'La fe se vive en comunión. DoIt4Jesus hace que la oración se sienta menos aislada al conectar personas mediante amistades, eventos del Rosario, actividad y clasificaciones. Estas herramientas funcionan mejor como ánimo: ver que alguien más ora también puede ayudarte a comenzar de nuevo.',
     features: [
       { title: 'Amigos católicos', icon: 'people', description: 'Invita amigos, responde solicitudes y mantén cerca a tus compañeros de oración sin hacer pública toda tu vida espiritual.', details: ['Enviar y responder solicitudes', 'Administrar conexiones', 'Ver actividad compatible de amigos'] },
       { title: 'Competencia sana', icon: 'star', description: 'Las clasificaciones semanales y del Rosario muestran participación. Úsalas como motivación amistosa, nunca para demostrar quién es más santo.', details: ['Clasificación semanal', 'Participación en el Rosario', 'Ánimo entre amigos y comunidad'] },
-      { title: 'Mapa mundial de oración', icon: 'globe', description: 'El mapa muestra actividad por ciudad y país, no la ubicación exacta de una persona.', details: ['Geografía generalizada', 'Actividad comunitaria de un vistazo', 'Sin coordenadas personales precisas'] },
+      { title: 'Mapa de actividad de oración', icon: 'globe', description: 'El mapa muestra actividad agregada de oración, no la ubicación exacta de una persona.', details: ['Geografía generalizada', 'Actividad comunitaria de un vistazo', 'Sin coordenadas personales precisas'] },
       { title: 'Eventos del Rosario en vivo', icon: 'rosary', description: 'Únete a sesiones con otras personas cuando estén disponibles y convierte una intención individual en un momento comunitario.', details: ['Lista de eventos', 'Participación en vivo cuando se programe', 'Oración con la comunidad'] },
     ],
   },
@@ -80,8 +80,8 @@ export const featureFaqEs = [
   { question: '¿DoIt4Jesus mide la santidad?', answer: 'No. Los niveles, XP, insignias, rachas y clasificaciones reflejan acciones registradas, no la santidad ni la relación de una persona con Dios.' },
   { question: '¿Puedo leer las lecturas diarias de la Misa?', answer: 'Sí. El área de Escritura muestra las lecturas, sus citas, el título y tiempo litúrgicos y una opción para marcarlas como leídas.' },
   { question: '¿Puedo aprender sobre la fe católica?', answer: 'Puedes explorar recursos de fe y usar exámenes de conciencia guiados.' },
-  { question: '¿Incluye un examen de conciencia?', answer: 'Sí. Hay exámenes para adultos, adolescentes y niños que ayudan a reflexionar y prepararse para la Confesión.' },
+  { question: '¿Incluye un examen de conciencia?', answer: 'Sí. Una guía para adultos ayuda a reflexionar y prepararse para la Confesión sin sustituir el Sacramento de la Reconciliación.' },
   { question: '¿Puedo conectar con otros católicos?', answer: 'Sí. Puedes usar amistades, funciones comunitarias, eventos del Rosario y un mapa de oración generalizado.' },
-  { question: '¿Es adecuada para adolescentes católicos?', answer: 'Sus herramientas pueden ser útiles para jóvenes católicos e incluyen un examen para adolescentes. Los padres deben acompañar el uso de funciones comunitarias.' },
+  { question: '¿Quién puede crear una cuenta de DoIt4Jesus?', answer: 'Según los Términos de servicio vigentes, el registro y las funciones autenticadas están disponibles solo para residentes de Estados Unidos mayores de 18 años.' },
   { question: '¿Sustituye la Misa o la Confesión?', answer: 'No. DoIt4Jesus anima la vida católica, pero no sustituye los Sacramentos, la Misa, la parroquia, la dirección espiritual ni la oración personal.' },
 ];

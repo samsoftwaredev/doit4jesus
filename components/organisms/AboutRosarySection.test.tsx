@@ -6,6 +6,6 @@ describe('AboutRosarySection', () => {
     render(<AboutRosarySection locale="es" />);
 
     expect(screen.getByRole('heading', { level: 2, name: 'Acerca del Rosario' })).toBeInTheDocument();
-    expect(screen.getByText(/El Rosario no son solo cuentas y oraciones/)).toBeInTheDocument();
+    expect(screen.getByText(/El Rosario es una devoción católica basada en la Escritura/)).toBeInTheDocument();
   });
 });

@@ -9,6 +9,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Page Not Found | DoIt4Jesus",
   description: "This page does not exist or may have moved.",
+  robots: { index: false, follow: false },
 };
 
 /** Renders an inviting lost-sheep recovery screen for every unmatched route. */

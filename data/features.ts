@@ -58,7 +58,7 @@ export const featureCategories: FeatureCategory[] = [
     introduction: 'Catholic growth involves understanding as well as action. DoIt4Jesus connects prayer with resources and guided reflection so a question can become an invitation to learn. Its current learning experience is focused on articles and examinations of conscience; bite-sized catechism courses, quizzes, and saint profiles are not advertised here until they are available in the app.',
     features: [
       { title: 'Catholic resources', icon: 'book', description: 'Explore faith-oriented reading beyond the dashboard. Short-form resources offer a place to begin when you want to understand a practice more deeply or carry a theme from prayer into the rest of your day.', details: ['Faith articles in the app', 'Further reading outside the prayer flow', 'A path from curiosity to reflection'] },
-      { title: 'Examination of conscience', icon: 'cross', description: 'Use guided questions to reflect honestly on your thoughts, words, actions, and habits. The app includes examinations tailored for adults, teens, and children, making this practice more approachable at different stages of life.', details: ['Age-appropriate guides', 'Questions for private reflection', 'Preparation for Confession'] },
+      { title: 'Examination of conscience', icon: 'cross', description: 'Use guided questions for adults to reflect honestly on thoughts, words, actions, and habits while preparing for Confession.', details: ['Adult reflection guide', 'Questions for private reflection', 'Preparation for Confession'] },
     ],
     closing: 'An examination of conscience can prepare your heart for repentance and the Sacrament of Reconciliation. An app cannot absolve sins or take the place of a priest, Confession, or wise pastoral care.',
   },
@@ -67,7 +67,7 @@ export const featureCategories: FeatureCategory[] = [
     introduction: 'A lasting prayer habit is usually built through ordinary, repeated choices. DoIt4Jesus uses visible progress to encourage those choices while keeping its perspective clear: grace is not a game mechanic, and the worth of a person cannot be counted. Small prompts to pray, read, and return can help you make space for God amid a busy day.',
     features: [
       { title: 'A rhythm you can return to', icon: 'heart', description: 'The dashboard brings today’s Rosary, daily Scripture, and your recent prayer activity together. Instead of searching through different tools, you have a practical starting point for a daily Catholic routine.', details: ['Prayer and Scripture in one dashboard', 'A quick view of today’s Rosary', 'Recent activity and progress'] },
-      { title: 'Conscience and conversion', icon: 'shield', description: 'Reflection asks a deeper question than “Did I keep a streak?” An examination of conscience helps you notice habits, seek mercy, and make a concrete resolution. It can sit alongside prayer tracking without being treated as another score.', details: ['Private self-examination', 'Adult, teen, and child guides', 'A bridge toward the Sacrament of Reconciliation'] },
+      { title: 'Conscience and conversion', icon: 'shield', description: 'Reflection asks a deeper question than “Did I keep a streak?” An examination of conscience helps you notice habits, seek mercy, and make a concrete resolution. It can sit alongside prayer tracking without being treated as another score.', details: ['Private self-examination for adults', 'Questions for honest reflection', 'A bridge toward the Sacrament of Reconciliation'] },
     ],
   },
   {
@@ -81,12 +81,12 @@ export const featureCategories: FeatureCategory[] = [
     closing: 'No amount of XP makes someone holier than another person. The purpose of progression is to encourage participation and steady habits while directing attention back to prayer and real life.',
   },
   {
-    id: 'community', label: 'Community', title: 'Pray With Catholics Around the World',
+    id: 'community', label: 'Community', title: 'Pray With a Catholic Community',
     introduction: 'Faith is lived in communion. DoIt4Jesus makes prayer feel less isolated by connecting people through friend requests, shared Rosary events, prayer activity, and leaderboards. The strongest use of these tools is encouragement: noticing that someone else is praying can help you begin again, too.',
     features: [
       { title: 'Catholic friends', icon: 'people', description: 'Invite friends, respond to requests, and keep your prayer companions close. The friend system supports accountability and connection without requiring your entire prayer life to become public.', details: ['Send and respond to requests', 'Manage your connections', 'View supported friend activity'] },
       { title: 'Holy competition', icon: 'star', description: 'Weekly and Rosary leaderboards show participation across the community. Use them as friendly motivation to be more disciplined—not as a contest to prove who is holier. A person’s interior life is known to God, not a ranking.', details: ['Weekly leaderboard', 'Rosary participation rankings', 'Friends and community encouragement'] },
-      { title: 'A global prayer map', icon: 'globe', description: 'The community map shows prayer activity by city and country rather than a person’s exact position. It offers a glimpse of Catholics praying across the world while keeping precise personal location out of the experience.', details: ['Generalized prayer geography', 'Community activity at a glance', 'No precise user coordinates in the public map'] },
+      { title: 'A prayer activity map', icon: 'globe', description: 'The community map shows aggregated prayer activity rather than a person’s exact position, keeping precise personal location out of the experience.', details: ['Generalized prayer geography', 'Community activity at a glance', 'No precise user coordinates in the public map'] },
       { title: 'Live Rosary events', icon: 'rosary', description: 'Join prayer sessions with others when events are available. Shared prayer can turn a solitary intention into a moment of community, especially for someone beginning a regular Rosary habit.', details: ['Rosary event listings', 'Live participation when scheduled', 'Prayer alongside the community'] },
     ],
   },
@@ -131,8 +131,8 @@ export const featureFaq = [
   { question: 'Does DoIt4Jesus measure how holy someone is?', answer: 'No. Levels, XP, badges, streaks, and leaderboards reflect actions recorded inside the app. They cannot measure holiness, spiritual worth, or a person’s relationship with God.' },
   { question: 'Can I read Catholic daily Mass readings in the app?', answer: 'Yes. The Daily Scripture area displays the day’s readings, their references, the liturgical title and season, and a way to mark the reading complete.' },
   { question: 'Can I learn the Catholic faith with DoIt4Jesus?', answer: 'You can explore faith resources and use guided examinations of conscience. A structured catalogue of catechism lessons, quizzes, and saint profiles is not currently advertised as an available app feature.' },
-  { question: 'Does DoIt4Jesus include an examination of conscience?', answer: 'Yes. Guided examinations for adults, teens, and children can help you reflect on your actions and prepare for Confession. This tool is private reflection, not a replacement for the Sacrament of Reconciliation.' },
+  { question: 'Does DoIt4Jesus include an examination of conscience?', answer: 'Yes. A guided examination for adults can help you reflect on your actions and prepare for Confession. This tool is private reflection, not a replacement for the Sacrament of Reconciliation.' },
   { question: 'Can I connect with other Catholics?', answer: 'Yes. You can use friend requests, community features, Rosary events, and a generalized prayer map to experience prayer alongside others.' },
-  { question: 'Is DoIt4Jesus suitable for Catholic teens and young adults?', answer: 'The app’s approachable design and prayer tools can be useful for young Catholics. It includes a teen examination of conscience. Parents and guardians should use their judgment when helping minors use online community features.' },
+  { question: 'Who can create a DoIt4Jesus account?', answer: 'Under the current Terms of Service, account registration and authenticated features are available only to U.S. residents age 18 and older.' },
   { question: 'Does DoIt4Jesus replace going to Mass or Confession?', answer: 'No. DoIt4Jesus exists to encourage participation in Catholic life—not replace the Sacraments, Mass, parish life, spiritual direction, or personal prayer.' },
 ];

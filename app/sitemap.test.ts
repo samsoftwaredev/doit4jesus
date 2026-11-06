@@ -22,4 +22,12 @@ describe('sitemap', () => {
       expect(urls).toContain(`${siteUrl}/es${page}`);
     }
   });
+
+  it('does not publish educational drafts before human approval', () => {
+    const urls = sitemap().map(({ url }) => url);
+    for (const slug of ['how-to-pray-the-rosary', 'rosary-mysteries-by-day', 'examination-of-conscience-guide', 'daily-catholic-prayers', 'daily-mass-readings']) {
+      expect(urls).not.toContain(`${siteUrl}/${slug}`);
+      expect(urls).not.toContain(`${siteUrl}/es/${slug}`);
+    }
+  });
 });

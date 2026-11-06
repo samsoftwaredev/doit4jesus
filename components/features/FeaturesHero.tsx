@@ -26,10 +26,10 @@ export function FeaturesHero({ locale = 'en' }: { locale?: Locale }) {
       </div>
       <div className="features-hero-art">
         <div className="features-app-device features-app-device-secondary">
-          <AppScreen screen="rosary" sizes="(max-width: 700px) 35vw, 220px" />
+          <AppScreen screen="rosary" locale={locale} sizes="(max-width: 700px) 35vw, 220px" />
         </div>
         <div className="features-app-device features-app-device-main">
-          <AppScreen screen="home" sizes="(max-width: 700px) 58vw, 350px" priority />
+          <AppScreen screen="home" locale={locale} sizes="(max-width: 700px) 58vw, 350px" priority />
         </div>
         <div className="features-app-label" aria-hidden="true"><span>{t.actual}</span><strong>{t.glance}</strong></div>
       </div>

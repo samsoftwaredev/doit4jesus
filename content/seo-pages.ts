@@ -42,7 +42,7 @@ export const seoPages: Record<SeoPageSlug, SeoPage> = {
     highlights: [
       { title: 'Guided Rosary prayer', body: 'Follow the mystery of the day, its spiritual fruit, and each prayer in a focused experience with audio support.' },
       { title: 'Daily Catholic Scripture', body: 'Read the day’s Mass readings with their references, liturgical title and season, and a featured verse for reflection.' },
-      { title: 'Examination of conscience', body: 'Use guided questions for adults, teens, and children to reflect privately and prepare your heart for Confession.' },
+      { title: 'Examination of conscience', body: 'Use guided questions for adults to reflect privately and prepare your heart for Confession.' },
       { title: 'Progress and community', body: 'See XP, levels, badges, friends, and community activity as encouragement to keep returning to meaningful practices.' },
     ],
     stepsTitle: 'A simple Catholic rhythm for ordinary days',
@@ -134,7 +134,7 @@ export const seoPages: Record<SeoPageSlug, SeoPage> = {
     slug: 'examination-of-conscience-app',
     title: 'An Examination of Conscience App for Honest Reflection',
     metaTitle: 'Examination of Conscience App | DoIt4Jesus',
-    description: 'Reflect with guided examinations of conscience for adults, teens, and children as you prepare your heart for Catholic Confession.',
+    description: 'Reflect with a guided examination of conscience for adults as you prepare your heart for Catholic Confession.',
     kicker: 'Prepare your heart',
     lead: 'DoIt4Jesus provides age-appropriate questions for private reflection so Catholics can examine thoughts, words, actions, and habits before Confession.',
     screen: 'home',
@@ -142,10 +142,10 @@ export const seoPages: Record<SeoPageSlug, SeoPage> = {
     introductionTitle: 'A quiet guide before Confession',
     introduction: [
       'An examination of conscience is a prayerful review of life in the light of God’s love and commandments. The DoIt4Jesus guide presents questions that can help you slow down, remember honestly, and approach repentance with greater intention.',
-      'Separate guides for adults, teens, and children make the language more approachable at different stages of life. Your reflection remains personal. The tool can help with preparation, but it cannot absolve sin, replace sacramental Confession, or take the place of wise pastoral guidance.',
+      'The adult guide keeps your reflection personal. It can help with preparation, but it cannot absolve sin, replace sacramental Confession, or take the place of wise pastoral guidance.',
     ],
     highlights: [
-      { title: 'Guides for different ages', body: 'Choose an examination written for adults, teenagers, or children rather than forcing one format onto every person.' },
+      { title: 'A guide for adult reflection', body: 'Move through focused questions written for adults and pause where honest reflection is needed.' },
       { title: 'Questions for private reflection', body: 'Consider thoughts, words, actions, omissions, relationships, responsibilities, and recurring habits.' },
       { title: 'Preparation for Confession', body: 'Use the guide to remember what you need to bring honestly to the Sacrament of Reconciliation.' },
       { title: 'Reflection within a wider rhythm', body: 'Place examination beside the Rosary, daily Scripture, and practical resolutions for life away from the screen.' },
@@ -159,7 +159,7 @@ export const seoPages: Record<SeoPageSlug, SeoPage> = {
     perspectiveTitle: 'A preparation tool, not a sacrament',
     perspective: 'An app cannot forgive sins or replace a priest. If a question creates confusion, serious distress, or uncertainty about moral responsibility, speak with a trusted priest or qualified professional rather than relying on software alone.',
     faqs: [
-      { question: 'Does DoIt4Jesus include an examination for children or teens?', answer: 'Yes. The app includes separate guided examinations for adults, teenagers, and children.' },
+      { question: 'Who can use authenticated DoIt4Jesus features?', answer: 'Under the current Terms of Service, authenticated features are available only to U.S. residents age 18 and older.' },
       { question: 'Is my examination of conscience a replacement for Confession?', answer: 'No. It is a private preparation tool. Sacramental absolution is received through Confession with a priest.' },
       { question: 'When should I use an examination of conscience?', answer: 'Catholics commonly use one before Confession and may also use a shorter examination as part of regular evening reflection.' },
     ],
@@ -193,7 +193,7 @@ export function seoPageMetadata(slug: SeoPageSlug, locale: Locale = 'en'): Metad
       url,
       title: page.metaTitle,
       description: page.description,
-      images: [{ url: `${siteUrl}/og-image.jpg`, width: 512, height: 512, alt: 'DoIt4Jesus Catholic prayer app' }],
+      images: [{ url: `${siteUrl}/og-image.jpg`, width: 512, height: 512, alt: locale === 'en' ? 'DoIt4Jesus Catholic prayer app' : 'Aplicación católica de oración DoIt4Jesus' }],
     },
     twitter: { card: 'summary_large_image', title: page.metaTitle, description: page.description, images: [`${siteUrl}/og-image.jpg`] },
   };

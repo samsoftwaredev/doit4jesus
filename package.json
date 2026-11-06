@@ -8,6 +8,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "jest",
+    "seo:check": "node scripts/check-seo.mjs",
     "prepare": "husky"
   },
   "dependencies": {

@@ -13,6 +13,19 @@ export type Page =
   | "rosary-tracker-app"
   | "examination-of-conscience-app";
 
+export const publicPages: readonly Page[] = [
+  "home",
+  "features",
+  "about",
+  "terms",
+  "privacy",
+  "guidelines",
+  "catholic-prayer-app",
+  "gamified-rosary-app",
+  "rosary-tracker-app",
+  "examination-of-conscience-app",
+] as const;
+
 export const siteUrl = "https://www.doitforjesus.com";
 export const appUrl = "https://app.doitforjesus.com";
 export const loginUrl = `${appUrl}/login`;
@@ -54,9 +67,9 @@ export const content = {
     },
     home: {
       brandLine: "The Rosary Gamified",
-      title: "Do It for Jesus, Every Day",
+      title: "Build a Daily Catholic Prayer Habit With DoIt4Jesus",
       description:
-        "Build a faithful Catholic rhythm through the Rosary, daily Scripture, reflection, meaningful progress, and community.",
+        "Pray a guided Catholic Rosary, read daily Mass Scripture, reflect, track your prayer habit, and find encouragement in a supportive faith community.",
       primary: "Get Started",
       featuresTitle: "The Rosary App",
       features: [
@@ -70,7 +83,7 @@ export const content = {
         },
         {
           title: "Grow Your Rosary Garden",
-          body: "Plant a flower with every completed Rosary and see your part in a worldwide community of prayer.",
+          body: "Plant a flower with every completed Rosary and see your prayer become part of the community count.",
           image: "/assets/app-home.webp",
           alt: "The Rosary Garden in the DoIt4Jesus app",
           imageFocus: "garden",
@@ -99,7 +112,7 @@ export const content = {
       videoTitle: "A video about the power of the Rosary",
       aboutTitle: "About the Rosary",
       aboutBody:
-        "The Rosary isn’t just beads and prayers—it is a spiritual weapon. When we pray it together, we join one another in pushing back darkness and interceding for souls. According to Catholic tradition, Mary gave St. Dominic the Rosary as a way to strengthen the faithful in spiritual battle.",
+        "The Rosary is a Scripture-based Catholic devotion that leads us to meditate with Mary on the mysteries of Christ. Its repeated prayers create space to remember the Gospel, ask for God’s grace, and intercede for others.",
       whyTitle: "Why Pray The Rosary?",
       benefits: [
         {
@@ -109,8 +122,8 @@ export const content = {
         },
         {
           number: "2",
-          title: "Save Souls",
-          body: "Through the Rosary, we intercede for souls and ask God to show mercy and grace.",
+          title: "Pray for Others",
+          body: "Through the Rosary, we bring the needs of others before God and ask for mercy and grace.",
         },
         {
           number: "3",
@@ -136,7 +149,7 @@ export const content = {
           },
           {
             title: "Examination of Conscience",
-            body: "Reflect with guided questions for adults, teens, and children as you prepare your heart for Confession.",
+            body: "Reflect with guided questions for adults as you prepare your heart for Confession.",
             icon: "cross",
             screen: "conscience",
             alt: "An examination of conscience question in the DoIt4Jesus app",
@@ -167,11 +180,11 @@ export const content = {
             href: "/catholic-prayer-app",
           },
           {
-            title: "Global Prayer Map",
-            body: "See prayer activity by city and country and discover a worldwide community growing in faith together.",
+            title: "Prayer Activity Map",
+            body: "See aggregated prayer activity and discover how the community is growing in faith together.",
             icon: "globe",
             screen: "global",
-            alt: "Worldwide prayer activity in the DoIt4Jesus app",
+            alt: "Aggregated prayer activity in the DoIt4Jesus app",
             href: "/catholic-prayer-app",
           },
         ],
@@ -181,10 +194,14 @@ export const content = {
     about: {
       eyebrow: "Our mission",
       title: "Pray together. Grow closer to Christ.",
-      lead: "DoIt4Jesus is a faith-based platform created to bring together people who want to grow spiritually through prayer, specifically by praying the Holy Rosary as a community.",
-      storyTitle: "Our story",
+      lead: "DoIt4Jesus is a Catholic prayer and spiritual-growth application centered on the Holy Rosary, daily Scripture, reflection, and community.",
+      storyTitle: "About the project",
       story:
-        "Born from a desire to build a digital space where faith and community intersect, DoIt4Jesus was created to make the Rosary accessible, engaging, and communal. What started as a simple idea has grown into a hub where believers around the world pray together in real time.",
+        "The project brings guided prayer, Catholic Scripture resources, personal progress, and community tools into one digital experience. It supports a life of prayer; it does not replace the Mass, the Sacraments, a parish, clergy, or spiritual direction.",
+      operatorTitle: "Publisher and operator",
+      operatorBody: "DoIt4Jesus is operated by INRI Paint & Wall LLC, a Texas limited liability company.",
+      editorialTitle: "How educational content is prepared",
+      editorialBody: "Educational resources are drafted from identified Catholic sources, include publication and review information, and remain unpublished until human editorial and theological review. DoIt4Jesus does not claim diocesan, parish, clergy, or institutional approval unless that relationship is verified and disclosed.",
       valuesTitle: "What guides us",
       values: [
         "Faith and prayer",
@@ -195,7 +212,9 @@ export const content = {
       ],
       forTitle: "Who it is for",
       forBody:
-        "DoIt4Jesus is for anyone seeking a deeper connection with God through the Rosary — from lifelong Catholics to those just discovering the beauty of this prayer.",
+        "Public prayer resources may be read without an account. Under the current Terms of Service, account registration and authenticated features are available only to U.S. residents age 18 and older.",
+      contactTitle: "Contact and policies",
+      contactBody: "For support or questions, email admin@doit4jesus.com. Review the Terms of Service, Privacy Policy, and Community Guidelines for current eligibility, privacy, and community rules.",
       cta: "Join us in prayer",
     },
     legal: {
@@ -221,9 +240,9 @@ export const content = {
     },
     home: {
       brandLine: "El Rosario hecho juego",
-      title: "Hazlo por Jesús, cada día",
+      title: "Crea un hábito diario de oración católica con DoIt4Jesus",
       description:
-        "Construye un ritmo católico fiel por medio del Rosario, la Sagrada Escritura, la reflexión, el progreso y la comunidad.",
+        "Reza un Rosario católico guiado, lee la Escritura diaria de la Misa, reflexiona, sigue tu hábito de oración y recibe ánimo de una comunidad de fe.",
       primary: "Comienza ahora",
       featuresTitle: "La aplicación del Rosario",
       features: [
@@ -237,7 +256,7 @@ export const content = {
         },
         {
           title: "Cultiva tu jardín",
-          body: "Planta una flor con cada Rosario terminado y descubre tu lugar en una comunidad mundial de oración.",
+          body: "Planta una flor con cada Rosario terminado y mira cómo tu oración se suma al conteo de la comunidad.",
           image: "/assets/app-home.webp",
           alt: "El Jardín del Rosario en la aplicación DoIt4Jesus",
           imageFocus: "garden",
@@ -266,7 +285,7 @@ export const content = {
       videoTitle: "Un video sobre el poder del Rosario",
       aboutTitle: "Acerca del Rosario",
       aboutBody:
-        "El Rosario no son solo cuentas y oraciones: es un arma espiritual. Cuando rezamos juntos, nos unimos para rechazar la oscuridad e interceder por las almas. Según la tradición católica, María entregó el Rosario a santo Domingo para fortalecer a los fieles en la batalla espiritual.",
+        "El Rosario es una devoción católica basada en la Escritura que nos lleva a meditar con María los misterios de Cristo. Sus oraciones repetidas crean un espacio para recordar el Evangelio, pedir la gracia de Dios e interceder por los demás.",
       whyTitle: "¿Por qué rezar el Rosario?",
       benefits: [
         {
@@ -276,8 +295,8 @@ export const content = {
         },
         {
           number: "2",
-          title: "Salva almas",
-          body: "Por medio del Rosario intercedemos por las almas y pedimos a Dios misericordia y gracia.",
+          title: "Ora por los demás",
+          body: "Por medio del Rosario presentamos a Dios las necesidades de otras personas y pedimos misericordia y gracia.",
         },
         {
           number: "3",
@@ -303,7 +322,7 @@ export const content = {
           },
           {
             title: "Examen de conciencia",
-            body: "Reflexiona con preguntas guiadas para adultos, adolescentes y niños mientras preparas tu corazón para la Confesión.",
+            body: "Reflexiona con preguntas guiadas para adultos mientras preparas tu corazón para la Confesión.",
             icon: "cross",
             screen: "conscience",
             alt: "Una pregunta del examen de conciencia en DoIt4Jesus",
@@ -334,11 +353,11 @@ export const content = {
             href: "/catholic-prayer-app",
           },
           {
-            title: "Mapa mundial de oración",
-            body: "Mira la actividad de oración por ciudad y país y descubre una comunidad mundial que crece unida en la fe.",
+            title: "Mapa de actividad de oración",
+            body: "Mira la actividad agregada de oración y descubre cómo la comunidad crece unida en la fe.",
             icon: "globe",
             screen: "global",
-            alt: "Actividad mundial de oración en DoIt4Jesus",
+            alt: "Actividad agregada de oración en DoIt4Jesus",
             href: "/catholic-prayer-app",
           },
         ],
@@ -348,10 +367,14 @@ export const content = {
     about: {
       eyebrow: "Nuestra misión",
       title: "Recemos juntos. Acerquémonos a Cristo.",
-      lead: "DoIt4Jesus es una plataforma basada en la fe creada para reunir a personas que quieren crecer espiritualmente a través de la oración, especialmente al rezar el Santo Rosario en comunidad.",
-      storyTitle: "Nuestra historia",
+      lead: "DoIt4Jesus es una aplicación católica de oración y crecimiento espiritual centrada en el Santo Rosario, la Escritura diaria, la reflexión y la comunidad.",
+      storyTitle: "Acerca del proyecto",
       story:
-        "Nacido del deseo de construir un espacio digital donde la fe y la comunidad se encuentren, DoIt4Jesus fue creado para hacer el Rosario accesible, atractivo y comunitario. Lo que comenzó como una idea simple se ha convertido en un centro donde creyentes de todo el mundo oran juntos en tiempo real.",
+        "El proyecto reúne oración guiada, recursos católicos de la Escritura, progreso personal y herramientas comunitarias en una experiencia digital. Acompaña la vida de oración; no sustituye la Misa, los Sacramentos, una parroquia, el clero ni la dirección espiritual.",
+      operatorTitle: "Editor y operador",
+      operatorBody: "DoIt4Jesus es operado por INRI Paint & Wall LLC, una sociedad de responsabilidad limitada de Texas.",
+      editorialTitle: "Cómo se prepara el contenido educativo",
+      editorialBody: "Los recursos educativos se redactan a partir de fuentes católicas identificadas, incluyen datos de publicación y revisión y permanecen sin publicar hasta completar una revisión humana editorial y teológica. DoIt4Jesus no afirma aprobación diocesana, parroquial, clerical o institucional sin una relación verificada y divulgada.",
       valuesTitle: "Lo que nos guía",
       values: [
         "Fe y oración",
@@ -362,7 +385,9 @@ export const content = {
       ],
       forTitle: "Para quién es",
       forBody:
-        "DoIt4Jesus es para cualquier persona que busque una conexión más profunda con Dios a través del Rosario, desde católicos de toda la vida hasta quienes recién descubren la belleza de esta oración.",
+        "Los recursos públicos de oración pueden leerse sin una cuenta. Según los Términos de servicio vigentes, el registro y las funciones autenticadas están disponibles solo para residentes de Estados Unidos mayores de 18 años.",
+      contactTitle: "Contacto y políticas",
+      contactBody: "Para asistencia o preguntas, escribe a admin@doit4jesus.com. Consulta los Términos de servicio, la Política de privacidad y las Normas de la comunidad para conocer las reglas vigentes de elegibilidad, privacidad y comunidad.",
       cta: "Únete a nosotros en oración",
     },
     legal: {

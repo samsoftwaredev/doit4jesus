@@ -6,11 +6,12 @@ import { HeroSection } from '../organisms/HeroSection';
 import { PowerfulWeaponSection } from '../organisms/PowerfulWeaponSection';
 import { RosaryBenefitsSection } from '../organisms/RosaryBenefitsSection';
 import { PublicPageShell } from '../templates/PublicPageShell';
+import { JsonLd } from '../seo/JsonLd';
 import { content, pathFor, siteUrl, type Locale } from '@/content/site';
 
 export function HomePage({ locale }: { locale: Locale }) {
   const structuredData = locale === 'en'
-    ? {
+    ? [{
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'DoIt4Jesus',
@@ -18,8 +19,9 @@ export function HomePage({ locale }: { locale: Locale }) {
         url: siteUrl,
         inLanguage: 'en-US',
         description: content.en.home.description,
-      }
-    : {
+        publisher: { '@type': 'Organization', name: 'DoIt4Jesus', legalName: 'INRI Paint & Wall LLC', url: siteUrl },
+      }]
+    : [{
         '@context': 'https://schema.org',
         '@type': 'WebPage',
         name: content.es.home.title,
@@ -27,11 +29,11 @@ export function HomePage({ locale }: { locale: Locale }) {
         inLanguage: 'es-ES',
         description: content.es.home.description,
         isPartOf: { '@type': 'WebSite', name: 'DoIt4Jesus', url: siteUrl },
-      };
+      }];
 
   return (
     <PublicPageShell locale={locale} page="home">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      {structuredData.map((data) => <JsonLd data={data} key={data['@type']} />)}
       <HeroSection locale={locale} />
       <AppFeatureSection locale={locale} />
       <PowerfulWeaponSection locale={locale} />

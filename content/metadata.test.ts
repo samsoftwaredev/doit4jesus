@@ -3,6 +3,16 @@ import { seoPageMetadata } from './seo-pages';
 import { siteUrl } from './site';
 
 describe('localized metadata', () => {
+  it('uses the approved homepage search intent without duplicating localized copy', () => {
+    const english = pageMetadata('en', 'home');
+    const spanish = pageMetadata('es', 'home');
+
+    expect(english.title).toBe('Catholic Prayer & Rosary App | DoIt4Jesus');
+    expect(english.description).toContain('guided Rosary mysteries');
+    expect(spanish.title).toBe('Aplicación católica de oración y Rosario | DoIt4Jesus');
+    expect(spanish.description).not.toBe(english.description);
+  });
+
   it('provides Spanish feature metadata with reciprocal language alternates', () => {
     const metadata = pageMetadata('es', 'features');
 

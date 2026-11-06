@@ -18,7 +18,7 @@ export const seoPagesEs: Record<SeoPageSlug, SeoPage> = {
     highlights: [
       { title: 'Rosario guiado', body: 'Sigue el misterio del día, su fruto espiritual y cada oración en una experiencia enfocada con apoyo de audio.' },
       { title: 'Escritura católica diaria', body: 'Lee las lecturas de la Misa con sus citas, el título y tiempo litúrgicos y un versículo para reflexionar.' },
-      { title: 'Examen de conciencia', body: 'Usa preguntas para adultos, adolescentes y niños a fin de reflexionar en privado y preparar el corazón para la Confesión.' },
+      { title: 'Examen de conciencia', body: 'Usa preguntas para adultos a fin de reflexionar en privado y preparar el corazón para la Confesión.' },
       { title: 'Progreso y comunidad', body: 'Mira XP, niveles, insignias, amigos y actividad comunitaria como estímulos para volver a prácticas que importan.' },
     ],
     stepsTitle: 'Un ritmo católico sencillo para los días ordinarios',
@@ -110,7 +110,7 @@ export const seoPagesEs: Record<SeoPageSlug, SeoPage> = {
     slug: 'examination-of-conscience-app',
     title: 'Una aplicación de examen de conciencia para reflexionar con sinceridad',
     metaTitle: 'Aplicación de examen de conciencia | DoIt4Jesus',
-    description: 'Reflexiona con exámenes de conciencia guiados para adultos, adolescentes y niños mientras preparas tu corazón para la Confesión.',
+    description: 'Reflexiona con un examen de conciencia guiado para adultos mientras preparas tu corazón para la Confesión.',
     kicker: 'Prepara tu corazón',
     lead: 'DoIt4Jesus ofrece preguntas apropiadas para cada edad y una reflexión privada sobre pensamientos, palabras, acciones y hábitos antes de la Confesión.',
     screen: 'home',
@@ -118,10 +118,10 @@ export const seoPagesEs: Record<SeoPageSlug, SeoPage> = {
     introductionTitle: 'Una guía serena antes de la Confesión',
     introduction: [
       'Un examen de conciencia es una revisión orante de la vida a la luz del amor y los mandamientos de Dios. La guía de DoIt4Jesus presenta preguntas que pueden ayudarte a detenerte, recordar con sinceridad y acercarte al arrepentimiento con mayor intención.',
-      'Las guías separadas para adultos, adolescentes y niños adaptan el lenguaje a distintas etapas. Tu reflexión sigue siendo personal. La herramienta ayuda a prepararte, pero no absuelve pecados ni sustituye la Confesión sacramental o una orientación pastoral prudente.',
+      'La guía para adultos mantiene la reflexión en el ámbito personal. Ayuda a prepararte, pero no absuelve pecados ni sustituye la Confesión sacramental o una orientación pastoral prudente.',
     ],
     highlights: [
-      { title: 'Guías para distintas edades', body: 'Elige un examen escrito para adultos, adolescentes o niños en lugar de imponer el mismo formato a todos.' },
+      { title: 'Una guía para la reflexión adulta', body: 'Avanza por preguntas enfocadas para adultos y detente donde necesites una reflexión sincera.' },
       { title: 'Preguntas para reflexionar en privado', body: 'Considera pensamientos, palabras, acciones, omisiones, relaciones, responsabilidades y hábitos recurrentes.' },
       { title: 'Preparación para la Confesión', body: 'Usa la guía para recordar lo que necesitas presentar con sinceridad en el Sacramento de la Reconciliación.' },
       { title: 'Reflexión dentro de un ritmo mayor', body: 'Une el examen al Rosario, la Escritura diaria y resoluciones prácticas para la vida fuera de la pantalla.' },
@@ -135,7 +135,7 @@ export const seoPagesEs: Record<SeoPageSlug, SeoPage> = {
     perspectiveTitle: 'Una preparación, no un sacramento',
     perspective: 'Una aplicación no puede perdonar pecados ni sustituir a un sacerdote. Si una pregunta te causa confusión, angustia seria o dudas sobre tu responsabilidad moral, habla con un sacerdote de confianza o un profesional cualificado.',
     faqs: [
-      { question: '¿DoIt4Jesus incluye un examen para niños o adolescentes?', answer: 'Sí. La aplicación incluye exámenes guiados distintos para adultos, adolescentes y niños.' },
+      { question: '¿Quién puede usar las funciones autenticadas de DoIt4Jesus?', answer: 'Según los Términos de servicio vigentes, están disponibles solo para residentes de Estados Unidos mayores de 18 años.' },
       { question: '¿El examen de conciencia sustituye la Confesión?', answer: 'No. Es una herramienta privada de preparación. La absolución sacramental se recibe en la Confesión con un sacerdote.' },
       { question: '¿Cuándo debería hacer un examen de conciencia?', answer: 'Los católicos suelen hacerlo antes de la Confesión y también pueden usar una versión breve como reflexión habitual al final del día.' },
     ],
