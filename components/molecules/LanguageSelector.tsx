@@ -8,11 +8,13 @@ export function LanguageSelector({ locale, page }: { locale: Locale; page: Page 
       <summary aria-label={title} title={title}>
         <span aria-hidden="true">{locale === 'en' ? '🇺🇸' : '🇪🇸'}</span>
         <span className="language-name">{content[locale].nav.language}</span>
-        <span className="chevron" aria-hidden="true">⌄</span>
+        <svg className="language-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path d="m4 6 4 4 4-4" />
+        </svg>
       </summary>
       <div className="language-options">
-        <Link href={pathFor('en', page)} hrefLang="en" lang="en" data-analytics-event="language_switch" data-analytics-id="language_english" data-analytics-placement="header_language" data-analytics-target="en"><span aria-hidden="true">🇺🇸</span> English</Link>
-        <Link href={pathFor('es', page)} hrefLang="es" lang="es" data-analytics-event="language_switch" data-analytics-id="language_spanish" data-analytics-placement="header_language" data-analytics-target="es"><span aria-hidden="true">🇪🇸</span> Español</Link>
+        <Link href={pathFor('en', page)} hrefLang="en" lang="en" aria-current={locale === 'en' ? 'page' : undefined} data-analytics-event="language_switch" data-analytics-id="language_english" data-analytics-placement="header_language" data-analytics-target="en"><span aria-hidden="true">🇺🇸</span> English</Link>
+        <Link href={pathFor('es', page)} hrefLang="es" lang="es" aria-current={locale === 'es' ? 'page' : undefined} data-analytics-event="language_switch" data-analytics-id="language_spanish" data-analytics-placement="header_language" data-analytics-target="es"><span aria-hidden="true">🇪🇸</span> Español</Link>
       </div>
     </details>
   );

@@ -162,26 +162,40 @@ summary:focus-visible {
   align-items: center;
   gap: 7px;
   min-height: 44px;
-  padding: 0 4px 0 6px;
+  padding: 0 8px;
+  border-radius: 10px;
   list-style: none;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
   white-space: nowrap;
+  transition: background-color 180ms ease;
+}
+.language-selector summary:hover,
+.language-selector[open] summary {
+  background: rgba(255, 255, 255, 0.1);
 }
 .language-selector summary::-webkit-details-marker,
 .mobile-menu summary::-webkit-details-marker {
   display: none;
 }
-.chevron {
-  display: inline-block;
-  font-size: 21px;
-  line-height: 1;
-  transform: translateY(-3px);
-  transition: transform 200ms ease;
+.language-chevron {
+  display: block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  transform-origin: center;
+  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-.language-selector[open] .chevron {
-  transform: translateY(1px) rotate(180deg);
+.language-chevron path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.language-selector[open] .language-chevron {
+  transform: rotate(180deg);
 }
 .language-options {
   position: absolute;
@@ -195,17 +209,37 @@ summary:focus-visible {
   background: #fff;
   color: #25394a;
   box-shadow: 0 14px 32px rgba(6, 23, 36, 0.19);
+  transform-origin: top right;
+  animation: language-options-in 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes language-options-in {
+  from {
+    opacity: 0;
+    transform: translateY(-7px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 .language-options a {
   display: flex;
+  align-items: center;
   gap: 8px;
   padding: 10px 12px;
   border-radius: 7px;
   font-size: 14px;
   text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
 }
-.language-options a:hover {
+.language-options a:hover,
+.language-options a:focus-visible {
   background: #eef2f4;
+}
+.language-options a[aria-current="page"] {
+  background: #e7eef2;
+  color: #153e5f;
+  font-weight: 700;
 }
 .mobile-menu {
   display: none;
