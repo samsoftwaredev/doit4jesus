@@ -974,6 +974,10 @@ summary:focus-visible {
   font-size: 16px;
   line-height: 1.8;
 }
+.about-story {
+  display: grid;
+  gap: 14px;
+}
 .values-list {
   padding-left: 22px;
 }

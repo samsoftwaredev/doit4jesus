@@ -28,6 +28,17 @@ describe('localized metadata', () => {
     expect(metadata.openGraph).toMatchObject({ locale: 'es_ES', url: `${siteUrl}/es/features` });
   });
 
+  it('describes the localized founder story on the About page', () => {
+    const english = pageMetadata('en', 'about');
+    const spanish = pageMetadata('es', 'about');
+
+    expect(english.title).toBe('Our Story | DoIt4Jesus Catholic Rosary App');
+    expect(english.description).toContain('the Eucharist');
+    expect(english.description).toContain('daily Rosary habit');
+    expect(spanish.title).toBe('Nuestra historia | Aplicación del Rosario DoIt4Jesus');
+    expect(spanish.description).toContain('hábito diario del Rosario');
+  });
+
   it('localizes SEO landing metadata and its canonical URL', () => {
     const metadata = seoPageMetadata('rosary-tracker-app', 'es');
 

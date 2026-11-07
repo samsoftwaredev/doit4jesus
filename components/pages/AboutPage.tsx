@@ -29,7 +29,9 @@ export function AboutPage({ locale }: { locale: Locale }) {
         <Box className="about-art"><Image src="/assets/mary-praying.jpeg" alt={locale === 'en' ? 'Illustration of Mary in prayer' : 'Ilustración de María en oración'} width={650} height={720} /></Box>
         <Box className="about-content">
           <Typography component="h2" variant="h3">{t.storyTitle}</Typography>
-          <Typography>{t.story}</Typography>
+          <Box className="about-story">
+            {t.story.map((paragraph) => <Typography key={paragraph}>{paragraph}</Typography>)}
+          </Box>
           <Typography component="h2" variant="h3">{t.operatorTitle}</Typography>
           <Typography>{t.operatorBody}</Typography>
           <Typography component="h2" variant="h3">{t.editorialTitle}</Typography>

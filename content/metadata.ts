@@ -5,7 +5,7 @@ const copy = {
   en: {
     home: { title: 'Catholic Prayer & Rosary App | DoIt4Jesus', description: 'Build a daily Catholic prayer habit with guided Rosary mysteries, daily Scripture, prayer tracking, and a supportive faith community. Explore DoIt4Jesus.' },
     features: { title: 'DoIt4Jesus Features | Catholic Prayer, Rosary & Faith App', description: 'Explore Catholic prayer, Rosary tracking, daily Scripture, spiritual growth, achievements, friends, and community features in the DoIt4Jesus faith app.' },
-    about: { title: 'About DoIt4Jesus | Mission, Publisher & Editorial Approach', description: 'Learn the mission of DoIt4Jesus, who operates the Catholic prayer app, and how educational resources are prepared and reviewed.' },
+    about: { title: 'Our Story | DoIt4Jesus Catholic Rosary App', description: 'Discover how the Eucharist, the 2020 pandemic, and a love of gaming inspired DoIt4Jesus, a Catholic app for building a joyful daily Rosary habit.' },
     terms: { title: 'Terms of Service | DoIt4Jesus', description: 'Read the terms that govern use of the DoIt4Jesus Rosary app and community.' },
     privacy: { title: 'Privacy Policy | DoIt4Jesus', description: 'Learn how DoIt4Jesus collects, uses, protects, and shares personal information.' },
     guidelines: { title: 'Community Guidelines | DoIt4Jesus', description: 'Read the safety, conduct, content, and event rules for the DoIt4Jesus prayer community.' },
@@ -13,7 +13,7 @@ const copy = {
   es: {
     home: { title: 'Aplicación católica de oración y Rosario | DoIt4Jesus', description: 'Crea un hábito diario de oración católica con el Rosario guiado, la Escritura diaria, el seguimiento de oración y una comunidad de fe.' },
     features: { title: 'Funciones de DoIt4Jesus | Oración y Rosario', description: 'Descubre las funciones de oración, Rosario, Escritura, progreso y comunidad de DoIt4Jesus.' },
-    about: { title: 'Acerca de DoIt4Jesus | Misión, editor y contenido', description: 'Conoce la misión de DoIt4Jesus, quién opera la aplicación católica y cómo se preparan y revisan los recursos educativos.' },
+    about: { title: 'Nuestra historia | Aplicación del Rosario DoIt4Jesus', description: 'Descubre cómo la Eucaristía, la pandemia de 2020 y el gusto por los videojuegos inspiraron DoIt4Jesus para cultivar el hábito diario del Rosario.' },
     terms: { title: 'Términos de servicio | DoIt4Jesus', description: 'Lee los términos oficiales que rigen la aplicación y la comunidad de DoIt4Jesus.' },
     privacy: { title: 'Política de privacidad | DoIt4Jesus', description: 'Conoce cómo DoIt4Jesus recopila, usa, protege y comparte datos personales.' },
     guidelines: { title: 'Normas de la comunidad | DoIt4Jesus', description: 'Lee las normas de seguridad, conducta, contenido y eventos de la comunidad de oración DoIt4Jesus.' },
