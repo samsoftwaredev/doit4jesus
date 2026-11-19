@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import { HeroAtmosphere } from './HeroAtmosphere';
 import { content, signupUrl, type Locale } from '@/content/site';
 
 export function HeroSection({ locale }: { locale: Locale }) {
@@ -12,6 +13,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
 
   return (
     <section className="hero-section" aria-labelledby="hero-title">
+      <HeroAtmosphere />
       <Container maxWidth="lg" className="hero-inner">
         <Typography component="p" className="hero-brand-line">{t.brandLine}</Typography>
         <Typography id="hero-title" component="h1" variant="h1">
