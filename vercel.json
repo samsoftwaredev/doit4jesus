@@ -28,5 +28,9 @@
       "destination": "https://www.doitforjesus.com/:path*",
       "permanent": true
     }
+   ],
+  "rewrites": [
+    { "source": "/invite/:code", "destination": "/invite" },
+    { "source": "/es/invite/:code", "destination": "/es/invite" }
   ]
 }
