@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   agentRules: false,
   experimental: {
     globalNotFound: true,
+    agentUpgrade: 'security',
   },
 };
 
